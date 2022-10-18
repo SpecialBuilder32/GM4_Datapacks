@@ -1,0 +1,55 @@
+{
+    "criteria": {
+        "leather_or_enchanted_book": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "equipment": {
+                                "mainhand": {
+                                    "items": [
+                                        "minecraft:leather",
+                                        "minecraft:enchanted_book"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "or_enchanted_page": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "player": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "equipment": {
+                                "mainhand": {
+                                    "items": [
+                                        "minecraft:paper"
+                                    ],
+                                    "nbt": "{gm4_book_binders:{item:\"enchanted_page\"}}"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements":[
+        [
+            "leather_or_enchanted_book",
+            "or_enchanted_page"
+        ]
+    ],
+    "rewards": {
+        "function": "gm4_book_binders:binder/interact/lectern_interact"
+    }
+}
