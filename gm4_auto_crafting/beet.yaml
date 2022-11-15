@@ -15,6 +15,9 @@ data_pack:
 resource_pack:
   load: .
 
+resource_pack:
+  load: .
+
 pipeline:
   - gm4_auto_crafting.generate
   - gm4.plugins.extend.module
