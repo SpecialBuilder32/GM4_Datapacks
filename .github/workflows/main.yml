@@ -2,7 +2,7 @@ name: Check and build modules
 
 on:
   push:
-    branches: [ master, ver/* ]
+    branches: [ piperef_ghaction, ver/* ]
   pull_request:
   workflow_dispatch:
 
