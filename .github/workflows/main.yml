@@ -64,6 +64,9 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install
 
+      - name: DEBUG
+        run: ls
+
       - name: Build and publish all modules
         if: github.event_name != 'pull_request'
         run: poetry run beet -p beet-release.yaml build
