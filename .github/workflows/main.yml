@@ -27,8 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
-    env:
-      LOG_LEVEL: ${{ runner.debug }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -81,6 +79,7 @@ jobs:
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
+          LOG_LEVEL: ${{ runner.debug }}
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
