@@ -65,7 +65,7 @@ jobs:
         run: poetry install
 
       - name: DEBUG
-        run: ls
+        run: cat beet-release.yaml
 
       - name: Build and publish all modules
         if: github.event_name != 'pull_request'
