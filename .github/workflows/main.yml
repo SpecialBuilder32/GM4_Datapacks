@@ -32,6 +32,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: DEBUG1
+        run: ls
+
       - name: Checkout release branch
         if: github.event_name != 'pull_request'
         uses: actions/checkout@v2
@@ -42,6 +45,9 @@ jobs:
       - name: Fetch pull request base
         if: github.event_name == 'pull_request'
         run: git fetch origin ${{ github.base_ref }}
+      
+      - name: DEBUG2
+        run: ls
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v2
@@ -64,16 +70,22 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install
 
+      - name: DEBUG
+        run: ls gm4_shapeless_portals
+
       - name: Build and publish all modules
         if: github.event_name != 'pull_request'
-        run: poetry run beet -p beet-release.yaml build
+        run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
         env:
           BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           BEET_SMITHED_TOKEN: ${{ secrets.SMITHED_TOKEN }}
+          LOG_LEVEL: ${{ runner.debug == 1 && 'INFO' || 'DEBUG'}}
 
       - name: Build all modules for pull request
         if: github.event_name == 'pull_request'
-        run: poetry run beet -p beet-release.yaml build
+        run: poetry run beet -p beet-release.yaml -l ${{ env.LOG_LEVEL }} build
+        env:
+          LOG_LEVEL: ${{ runner.debug == 1 && 'INFO' || 'DEBUG'}}
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
