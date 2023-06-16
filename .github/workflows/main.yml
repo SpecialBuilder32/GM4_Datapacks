@@ -82,10 +82,10 @@ jobs:
           LOG_LEVEL: ${{ runner.debug == 1 && 'INFO' || 'DEBUG'}}
 
       - name: Build all modules for pull request
-        if: github.event_name == 'pull_request'
-        run: poetry run beet -p beet-release.yaml -l ${{ LOG_LEVEL }} build
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'INFO' || 'DEBUG'}}
+        if: github.event_name == 'pull_request'
+        run: poetry run beet -p beet-release.yaml -l ${{ LOG_LEVEL }} build
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
