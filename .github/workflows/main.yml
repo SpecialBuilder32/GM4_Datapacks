@@ -65,7 +65,7 @@ jobs:
         run: poetry install
 
       - name: DEBUG
-        run: cat beet-release.yaml
+        run: ls gm4_shapeless_portals
 
       - name: Build and publish all modules
         if: github.event_name != 'pull_request'
