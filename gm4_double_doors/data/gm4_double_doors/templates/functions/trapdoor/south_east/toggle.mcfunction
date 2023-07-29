@@ -4,7 +4,7 @@
 # run from TODO
 
 # player just closed a door
-execute if score $target_trapdoor_state gm4_double_doors_data matches 0 run setblock ~ ~ ~ $material_name$_trapdoor[open=true,half=bottom,facing=south]
+execute if score $target_trapdoor_state gm4_double_doors_data matches 0 run setblock ~ ~ ~ {{ material_name }}_trapdoor[open=true,half=bottom,facing=south]
 
 # player just opened a door
-execute if score $target_trapdoor_state gm4_double_doors_data matches 1 run setblock ~ ~ ~ $material_name$_trapdoor[open=true,half=bottom,facing=east]
+execute if score $target_trapdoor_state gm4_double_doors_data matches 1 run setblock ~ ~ ~ {{ material_name }}_trapdoor[open=true,half=bottom,facing=east]
