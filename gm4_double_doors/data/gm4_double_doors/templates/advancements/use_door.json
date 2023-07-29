@@ -20,7 +20,7 @@
                         "predicate": {
                             "block": {
                                 "blocks": [
-                                    "minecraft:$material_name$_door"
+                                    "minecraft:{{ material_name }}_door"
                                 ]
                             }
                         }
@@ -30,6 +30,6 @@
         }
     },
     "rewards": {
-        "function": "gm4_double_doors:$material_name$/use_door"
+        "function": "gm4_double_doors:{{ material_name }}/use_door"
     }
 }
