@@ -1,5 +1,21 @@
-from beet import subproject, Context
+from typing import ClassVar, Union
+
+from beet import Context, Structure, TextFile, TextFileContent, subproject
 from beet.contrib.vanilla import Vanilla
+from nbtlib import parse_nbt
+from nbtlib.contrib.minecraft import StructureFileData
+
+
+class StringStructure(TextFile):
+    scope: ClassVar[tuple[str, ...]] = ("structures",)
+    extension: ClassVar[str] = ".snbt"
+
+    def serialize_to_structure(self) -> Structure:
+        return Structure(parse_nbt(self.text))
+
+def register_snbt_files(ctx: Context):
+    ctx.data.extend_namespace.append(StringStructure)
+
 
 def beet_default(ctx: Context):
     vanilla = ctx.inject(Vanilla)
@@ -7,6 +23,9 @@ def beet_default(ctx: Context):
     
     for wood_type in [s.removeprefix("minecraft:").removesuffix("_door") for s in wooden_doors.data["values"]]:
         subproject_config = {
+            "require": [
+                "gm4_double_doors.special-tests.register_snbt_files"
+            ],
             "data_pack":{
                 "load": [
                     {
@@ -18,12 +37,16 @@ def beet_default(ctx: Context):
                 "render":{
                     "advancements": "*",
                     "functions": "*",
-                    # "structures": "*"
+                    "string_structures": "*" # renders all mounted files of the StringStructure container
                 }
             },
             "meta":{
-                "material_type": wood_type
+                "material_name": wood_type
             }
         }
 
         ctx.require(subproject(subproject_config))
+
+    for name, struct in ctx.data[StringStructure].items():
+        ctx.data[Structure][name] = struct.serialize_to_structure()
+    ctx.data[StringStructure].clear()
