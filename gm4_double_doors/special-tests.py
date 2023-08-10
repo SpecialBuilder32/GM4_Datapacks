@@ -1,9 +1,8 @@
-from typing import ClassVar, Union
+from typing import ClassVar
 
-from beet import Context, Structure, TextFile, TextFileContent, subproject
+from beet import Context, Structure, TextFile, subproject
 from beet.contrib.vanilla import Vanilla
 from nbtlib import parse_nbt
-from nbtlib.contrib.minecraft import StructureFileData
 
 
 class StringStructure(TextFile):
