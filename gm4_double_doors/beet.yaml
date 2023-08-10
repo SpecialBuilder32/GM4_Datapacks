@@ -6,8 +6,7 @@ data_pack:
   load: .
 
 pipeline:
-  - gm4_double_doors.special-tests
-  # - gm4_double_doors.generate
+  - gm4_double_doors.generate
   - gm4.plugins.extend.module
 
 meta:

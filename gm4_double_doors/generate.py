@@ -6,6 +6,7 @@ from nbtlib import parse_nbt
 
 
 class StringStructure(TextFile):
+    """Create class that loads .snbt files into the beet project"""
     scope: ClassVar[tuple[str, ...]] = ("structures",)
     extension: ClassVar[str] = ".snbt"
 
@@ -13,6 +14,7 @@ class StringStructure(TextFile):
         return Structure(parse_nbt(self.text))
 
 def register_snbt_files(ctx: Context):
+    # register the custom file-type with beet so those files are mounted
     ctx.data.extend_namespace.append(StringStructure)
 
 
@@ -20,10 +22,11 @@ def beet_default(ctx: Context):
     vanilla = ctx.inject(Vanilla)
     wooden_doors = vanilla.data.block_tags["minecraft:wooden_doors"]
     
+    # for each wood type in the vanilla doors tag, render a copy of the "templates" directory with the appropiate wood-type
     for wood_type in [s.removeprefix("minecraft:").removesuffix("_door") for s in wooden_doors.data["values"]]:
         subproject_config = {
             "require": [
-                "gm4_double_doors.special-tests.register_snbt_files"
+                "gm4_double_doors.generate.register_snbt_files"
             ],
             "data_pack":{
                 "load": [
@@ -46,6 +49,7 @@ def beet_default(ctx: Context):
 
         ctx.require(subproject(subproject_config))
 
+    # transform the "string-structure" files into actual binary files
     for name, struct in ctx.data[StringStructure].items():
         ctx.data[Structure][name] = struct.serialize_to_structure()
     ctx.data[StringStructure].clear()
