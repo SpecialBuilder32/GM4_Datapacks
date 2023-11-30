@@ -3,7 +3,7 @@ from beet.contrib.vanilla import Vanilla
 import nbtlib # type: ignore ; missing stub file
 import colorsys, json, os
 from PIL import Image
-from typing import TypedDict, Any, ClassVar, Literal, Optional
+from typing import Any, ClassVar, Literal, Optional
 from pydantic import BaseModel
 
 # TODO:
@@ -53,7 +53,6 @@ def beet_default(ctx: Context):
   if not ctx.data[GuidebookPages]:
     return # there are no pages configured
 
-  book_ids: list[str] = []
   for book in [b.data for b in ctx.data[GuidebookPages].values()]:
     
     # get trigger id, generate one if not already existing
@@ -79,8 +78,6 @@ def beet_default(ctx: Context):
     if not book.wiki_link:
       book.wiki_link = ctx.meta['gm4']['wiki']
 
-    book_ids.append(book.id) # if book.id else filename TODO
-
     # read the dict and get the page storages
     loottable, lectern_loot, pages, lectern_pages = generate_loottable(book)
     # add loot tables to datapack
@@ -102,13 +99,6 @@ def beet_default(ctx: Context):
         ctx.data[f"gm4_guidebook:{book.id}/display/{section.name}"] = generate_display_advancement(book)
         ctx.data[f"gm4_guidebook:{book.id}/rewards/{section.name}"] = generate_reward_function(
           section, book.id, book.name, book.description)
-
-  # add function tags to datapack
-  ctx.data["gm4_guidebook:add_toc_line"] = generate_add_toc_line_tag(book_ids)
-  ctx.data["gm4_guidebook:summon_marker"] = generate_summon_marker_tag(book_ids)
-  ctx.data["gm4_guidebook:update_hand"] = generate_update_hand_tag(book_ids)
-  ctx.data["gm4_guidebook:update_lectern"] = generate_update_lectern_tag(book_ids)
-  ctx.data["gm4_guidebook:setup_storage"] = generate_setup_storage_tag(book_ids)
 
 
 """
@@ -1802,18 +1792,6 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
 
 
 """
-Create the function tag to setup page storages
-"""
-def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/setup_storage" for book_id in book_ids
-    ]
-  })
-
-
-
-"""
 Creates the function that populates the page storage
 """
 def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], book: Book, vanilla: Vanilla) -> Function:
@@ -1844,20 +1822,7 @@ def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], 
     unlocked,
     locked,
     lectern
-  ])
-
-
-
-"""
-Creates the function tag to add a line to the table of contents
-"""
-def generate_add_toc_line_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/add_toc_line"for book_id in book_ids
-    ]
-  })
-
+  ], tags=["gm4_guidebook:setup_storage"])
 
 
 """
@@ -1882,20 +1847,7 @@ def generate_add_toc_line_function(book: Book) -> Function:
   }
   return Function([
     f"execute if score $trigger gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:temp page append value ' {json.dumps(text_component, ensure_ascii=False)}'"
-  ])
-
-
-
-"""
-Creates the function tag to summon a guidebook marker
-"""
-def generate_summon_marker_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/summon_marker"for book_id in book_ids
-    ]
-  })
-
+  ], tags=["gm4_guidebook:add_toc_line"])
 
 
 """
@@ -1915,20 +1867,8 @@ def generate_summon_marker_function(book: Book) -> Function:
   marker_nbt["data"]["toc_line"] = nbtlib.String(get_toc_line(book))
   marker_nbt["data"]["line_count"] = nbtlib.Int(len(split_into_lines(get_toc_line(book))))
   return Function([
-    f"execute if score {book['load_check']} load.status matches 1.. run summon marker ~ {get_pos_hash(book['id'])} ~ {nbtlib.serialize_tag(marker_nbt)}"# type: ignore
-  ])
-
-
-
-"""
-Creates the function tag to update the guidebook in hand
-"""
-def generate_update_hand_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/update_hand"for book_id in book_ids
-    ]
-  })
+    f"execute if score {book.load_check} load.status matches 1.. run summon marker ~ {get_pos_hash(book.id)} ~ {nbtlib.serialize_tag(marker_nbt)}"# type: ignore
+  ], tags=["gm4_guidebook:summon_marker"])
 
 
 """
@@ -1939,20 +1879,7 @@ def generate_update_hand_function(book: Book) -> Function:
   return Function([
     f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_mainhand] weapon.mainhand loot gm4_guidebook:{book.id}",
     f"{start} loot replace entity @s[predicate=gm4_guidebook:book_in_offhand] weapon.offhand loot gm4_guidebook:{book.id}"
-  ])
-
-
-
-"""
-Creates the function tag to update the guidebook in lecterns
-"""
-def generate_update_lectern_tag(book_ids: list[str]) -> FunctionTag:
-  return FunctionTag({
-    "values": [
-      f"gm4_guidebook:{book_id}/update_lectern"for book_id in book_ids
-    ]
-  })
-
+  ], tags=["gm4_guidebook:update_hand"])
 
 
 """
@@ -1962,7 +1889,7 @@ def generate_update_lectern_function(book: Book) -> Function:
   start = f"execute if score $trigger gm4_guide matches {book.trigger_id} if score {book.load_check} load.status matches 1.. run"
   return Function([
     f"{start} loot spawn ~ ~-3000 ~ loot gm4_guidebook:lectern/{book.id}"
-  ])
+  ], tags=["gm4_guidebook:update_lectern"])
 
 
 """
