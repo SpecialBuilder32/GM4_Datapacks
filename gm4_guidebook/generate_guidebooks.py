@@ -32,6 +32,7 @@ class Book(BaseModel):
   sections: list[Section]
   trigger_id: int = -1 # value set by triggers.json
   description: Optional[str]
+  wiki_link: Optional[str]
 
 
 class GuidebookPages(JsonFileBase[Book]):
@@ -73,6 +74,10 @@ def beet_default(ctx: Context):
     # get load check
     if not book.load_check:
       book.load_check = book.id if "gm4_" in book.id else f"gm4_{book.id}"
+
+    # get wiki link
+    if not book.wiki_link:
+      book.wiki_link = ctx.meta['gm4']['wiki']
 
     book_ids.append(book.id) # if book.id else filename TODO
 
@@ -175,7 +180,7 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "open_url",
-        "value": ctx.meta['gm4']['wiki']
+        "value": book.wiki_link
       },
       "hoverEvent": {
         "action": "show_text",
@@ -311,7 +316,7 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "open_url",
-        "value": ctx.meta['gm4']['wiki']
+        "value": book.wiki_link
       },
       "hoverEvent": {
         "action": "show_text",
@@ -420,7 +425,7 @@ def generate_book_header(book: Book) -> list[dict[Any, Any]|str]:
 Generates the book's header for the lectern 
 difference is change_page vs run_command click events
 """
-def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
+def generate_lectern_header(book: Book) -> list[dict[Any, Any]|str]:
   # header JSON
   header: list[dict[Any, Any]|str] = [
     "",
@@ -468,7 +473,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "open_url",
-        "value": ctx.meta['gm4']['wiki']
+        "value": book.wiki_link
       },
       "hoverEvent": {
         "action": "show_text",
@@ -604,7 +609,7 @@ def generate_lectern_header(book_dict: Book) -> list[dict[Any, Any]|str]:
       ],
       "clickEvent": {
         "action": "open_url",
-        "value": ctx.meta['gm4']['wiki']
+        "value": book.wiki_link
       },
       "hoverEvent": {
         "action": "show_text",
@@ -1283,10 +1288,10 @@ def get_toc_line(book_dict: Book) -> str:
 
 
 """
-Reads the book dictionary to generate the loot tables (one for hand, one for lectern)
+Reads the book object to generate the loot tables (one for hand, one for lectern)
 and the page contents that need to be stored
 """
-def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any], list[Any]]:
+def generate_loottable(book: Book) -> tuple[LootTable, LootTable, list[Any], list[Any]]:
   page_storage:list[Any] = []
   lectern_storage:list[Any] = []
 
@@ -1294,7 +1299,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
   functions:list[dict[Any, Any]] = [
     {
       "function": "minecraft:set_nbt",
-      "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:0b, trigger:" + str(book_dict.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+      "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:0b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
     },
     {
       "function": "minecraft:set_count",
@@ -1313,7 +1318,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
   functions_lectern:list[dict[Any, Any]] = [
     {
     "function": "minecraft:set_nbt",
-    "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:1b, trigger:" + str(book_dict.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
+    "tag": "{CustomModelData:3420001,gm4_guidebook:{lectern:1b, trigger:" + str(book.trigger_id) + "},title:\"Gamemode 4 Guidebook\",author:Unknown,generation:3,pages:[]}"
     },
     {
       "function": "minecraft:copy_nbt",
@@ -1332,7 +1337,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
   ]
 
   # create conditions list for each section
-  for i, section in enumerate(book_dict.sections):
+  for i, section in enumerate(book.sections):
     enable_conditions:list[dict[Any, Any]] = []
 
     # condition to check load status of other modules
@@ -1361,7 +1366,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
         "type_specific": {
           "type": "player",
           "advancements": {
-            f"gm4_guidebook:{book_dict.id}/unlock/{section.name}": True
+            f"gm4_guidebook:{book.id}/unlock/{section.name}": True
           }
         }
       }
@@ -1375,7 +1380,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
         "type_specific": {
           "type": "player",
           "advancements": {
-            f"gm4_guidebook:{book_dict.id}/unlock/{section.name}": False
+            f"gm4_guidebook:{book.id}/unlock/{section.name}": False
           }
         }
       }
@@ -1390,7 +1395,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
       # append from the indexed storage
       enabled_ops.append({
         "op": "append",
-        "source": f"{book_dict.id}.pages[{len(page_storage)}]",
+        "source": f"{book.id}.pages[{len(page_storage)}]",
         "target": "pages"
       })
       # generate the page storage
@@ -1398,7 +1403,7 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
 
       enabled_ops_lectern.append({
         "op": "append",
-        "source": f"{book_dict.id}.lectern[{len(lectern_storage)}]",
+        "source": f"{book.id}.lectern[{len(lectern_storage)}]",
         "target": "pages"
       })
       lectern_storage.append(page)
@@ -1406,12 +1411,12 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     # locked pages to be appended
     fallback_default = {
       "op": "append",
-      "source": f"{book_dict.id}.locked[0]",
+      "source": f"{book.id}.locked[0]",
       "target": "pages"
     }
     fallback_default_lectern = {
       "op": "append",
-      "source": f"{book_dict.id}.locked[1]",
+      "source": f"{book.id}.locked[1]",
       "target": "pages"
     }
     fallback_ops = [fallback_default] * len(enabled_ops)
@@ -1419,12 +1424,12 @@ def generate_loottable(book_dict: Book) -> tuple[LootTable, LootTable, list[Any]
     if (i == 0):
       fallback_ops[0] = {
         "op": "append",
-        "source": f"{book_dict.id}.locked[2]",
+        "source": f"{book.id}.locked[2]",
         "target": "pages"
       }
       fallback_ops_lectern[0] = {
         "op": "append",
-        "source": f"{book_dict.id}.locked[3]",
+        "source": f"{book.id}.locked[3]",
         "target": "pages"
       }
 
@@ -1811,7 +1816,7 @@ def generate_setup_storage_tag(book_ids: list[str]) -> FunctionTag:
 """
 Creates the function that populates the page storage
 """
-def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], book_dict: Book, vanilla: Vanilla) -> Function:
+def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], book: Book, vanilla: Vanilla) -> Function:
   populated_pages: list[str] = []
   populated_lectern: list[str] = []
   locked_pages: list[str] = []
@@ -1819,21 +1824,21 @@ def generate_setup_storage_function(pages: list[Any], lectern_pages: list[Any], 
   # setup locked storage  
   locked_title: list[dict[Any, Any]|str] = [{'insert':'title'},{'insert':'locked_text_title'}]
   locked_text: list[dict[Any, Any]|str] = [{'insert':'locked_text'}]
-  locked_pages.append(stringify_page(locked_text, book_dict, vanilla, False))
-  locked_pages.append(stringify_page(locked_text, book_dict, vanilla, True))
-  locked_pages.append(stringify_page(locked_title, book_dict, vanilla, False))
-  locked_pages.append(stringify_page(locked_title, book_dict, vanilla, True))
+  locked_pages.append(stringify_page(locked_text, book, vanilla, False))
+  locked_pages.append(stringify_page(locked_text, book, vanilla, True))
+  locked_pages.append(stringify_page(locked_title, book, vanilla, False))
+  locked_pages.append(stringify_page(locked_title, book, vanilla, True))
 
   # populate the inserts and stringify the pages
   for page in pages:
-    populated_pages.append(stringify_page(page, book_dict, vanilla, False))
+    populated_pages.append(stringify_page(page, book, vanilla, False))
   for page in lectern_pages:
-    populated_lectern.append(stringify_page(page, book_dict, vanilla, True))
+    populated_lectern.append(stringify_page(page, book, vanilla, True))
 
   # write each command to be placed in the function
-  unlocked = f"execute if score {book_dict.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict.id}.pages set value {populated_pages}"
-  locked = f"execute if score {book_dict.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict.id}.locked set value {locked_pages}"
-  lectern = f"execute if score {book_dict.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book_dict.id}.lectern set value {populated_lectern}"
+  unlocked = f"execute if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book.id}.pages set value {populated_pages}"
+  locked = f"execute if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book.id}.locked set value {locked_pages}"
+  lectern = f"execute if score {book.load_check} load.status matches 1.. run data modify storage gm4_guidebook:pages {book.id}.lectern set value {populated_lectern}"
   
   return Function([
     unlocked,
