@@ -109,6 +109,7 @@ def beet_default(ctx: Context):
 
     # read the dict and get the page storages
     loottable, lectern_loot, pages, lectern_pages = generate_loottable(book)
+
     # add loot tables to datapack
     ctx.data[f"gm4_guidebook:{book.id}"] = loottable
     ctx.data[f"gm4_guidebook:lectern/{book.id}"] = lectern_loot
@@ -1215,9 +1216,7 @@ def generate_recipe_display(recipe: str, ctx: Context) -> list[TextComponent]:
 Calculate how many advances each character takes up when written in the default minecraft font
 """
 def char_advance(char: str) -> int:
-  # open database
-  with open("gm4_guidebook/advances.json") as advances_file:
-    advances = json.load(advances_file)
+  advances = JsonFile(source_path="gm4_guidebook/advances.json").data
   # find char in database
   if char in advances:
     if type(advances[char]) == dict:
@@ -1747,7 +1746,7 @@ def generate_reward_function(section: Section, book_id: str, book_name: str, des
   else:
     start = ""
   # standard tellraw message
-  tellraw: list[dict[Any, Any] | str] = [
+  tellraw: list[TextComponent] = [
     "", 
     {
       "translate": "text.gm4.guidebook.discovered", 
