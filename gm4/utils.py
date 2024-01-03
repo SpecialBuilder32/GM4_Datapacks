@@ -3,12 +3,11 @@ import subprocess
 import warnings
 from dataclasses import asdict, dataclass
 from functools import total_ordering
-from typing import Any, Callable, Generic, TypeVar
+from typing import Any, Callable, TypeVar
 
 from beet import ListOption, Context, LootTable, ItemModifier, Advancement
 from mecha import AstNbtCompound, Mecha, CompilationUnit
-from pydantic import validator
-from pydantic.generics import GenericModel
+from pydantic import RootModel, model_validator
 
 T = TypeVar('T')
 
@@ -96,38 +95,39 @@ class NoneAttribute():
 	def __getattribute__(self, __name: str) -> None:
 		return None
 
-class MapOption(GenericModel, Generic[T]):
+class MapOption(RootModel[list[T]|dict[str,T]]):
 	"""A union-like type of dict and list, supporting common methods for both
 		- Written for use in resource_pack plugin's texture lists"""
-	__root__: list[T]|dict[str,T] = []
+	root: list[T]|dict[str,T] = []
 
 	def entries(self) -> list[T]:
-		if isinstance(self.__root__, list):
-			return self.__root__
-		return list(self.__root__.values())
+		if isinstance(self.root, list):
+			return self.root
+		return list(self.root.values())
 	
 	def __getitem__(self, key: str|int) -> T:
 		if isinstance(key, int):
 			return self.entries()[key]
-		if isinstance(self.__root__, list):
+		if isinstance(self.root, list):
 			raise KeyError(f"MapOption has no mapping data keys. Could not retrieve {key}")
-		return self.__root__[key]
+		return self.root[key]
 	
 	def items(self):
-		if isinstance(self.__root__, dict):
-			return self.__root__.items()
+		if isinstance(self.root, dict):
+			return self.root.items()
 		raise KeyError("MapOption has no mapping data keys. Can not retrieve items()")
 	
-	@validator("__root__", pre=True)
-	def validate_root(cls, value: list[T]|dict[str,T]|T) -> list[T]|dict[str,T]:
+	@model_validator(mode='before')
+	@classmethod
+	def validate_root(cls, value: Any) -> list[T]|dict[str,T]:
 		if value is None:
 			value = []
-		elif isinstance(value, ListOption):
+		elif isinstance(value, (ListOption, MapOption)):
 			value = value.entries()
-		if not isinstance(value, (list, tuple, dict)): # single element
+		elif not isinstance(value, (list, tuple, dict)): # single element
 			value = [value]
 		return value # type: ignore
-	
+		
 
 def mecha_transform_jsonfiles(ctx: Context, transformer: Any):
 	"""Passes nbt contained in advancements, loot_tables ect.. through a custom specified Mecha AST rule"""

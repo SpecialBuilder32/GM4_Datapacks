@@ -39,8 +39,9 @@ from mecha import (
     rule,
 )
 from nbtlib import String  # type: ignore ; nbtlib missing stubfile
-from pydantic import BaseModel, Extra, Field, ValidationError, validator
-from pydantic.error_wrappers import ErrorWrapper
+# from pydantic import BaseModel, Field, ValidationError, validator
+# from pydantic.error_wrappers import ErrorWrapper
+from pydantic import BaseModel, field_validator, AliasChoices, Field
 from tokenstream import set_location
 
 from gm4.utils import MapOption, add_namespace, mecha_transform_jsonfiles
@@ -56,245 +57,256 @@ class ModelData(BaseModel):
     """A complete config for a single model"""
     item: ListOption[str]
     reference: str
-    model: MapOption[str|list[dict[str,Any]]] = "" # defaults to same value as 'reference'      #type:ignore ; the validator handles the default value
-    template: 'str|TemplateOptions' = "custom"
-    transforms: Optional[list['TransformOptions']]
-    textures: MapOption[str] = [] # defaults to same value as reference         #type:ignore ; the validator handles the default value
+    # model: MapOption[str|list[dict[str,Any]]] = Field(..., validation_alias=AliasChoices('model', 'reference')) # defaults to 'reference' if 'model' not set
+    # template: 'str|TemplateOptions' = "custom"
+    template: str = "custom"
+    # transforms: Optional[list['TransformOptions']]
+    # textures: MapOption[str] = Field(..., validation_alias=AliasChoices('textures', 'reference')) # defaults to 'reference' if 'textures' is not set
 
-    @validator('model', pre=True, always=True)
-    def default_model(cls, model: Any, values: dict[str,Any]) -> dict[str, str|list[dict[str,Any]]]:
-        if isinstance(model, str):
-            model = [model] # so we can check len for number of items
-        if not model and "reference" in values: # no reference set, default to reference string
-            return {item: values["reference"] for item in values['item'].entries()}
-        if len(i:=values['item'].entries()) == 1 and isinstance(model, list) and isinstance(model[0], dict): # only one item id, predicate model allowed to be single list
-            return {i[0]: model}
-        if len(model)!=len(values["item"].entries()) and len(model)>1: # a single model name may be broadcast to all items, but otherwise lengths match       # type: ignore ; 'model' inherits list[Unknown] from previous isinstance check
-            raise ValidationError([ErrorWrapper(ValueError("length of 'item' and 'model' do not match"), loc=())], model=ModelData)
-        if isinstance(model, list): # apply item->model map data
-            return dict(zip(values['item'].entries(), cycle(model))) # type: ignore
-        if isinstance(model, dict) and set(model.keys())!=set(values['item'].entries()): # make sure the map keys match the item types       # type: ignore ; model is Unknown type
-            raise ValidationError([ErrorWrapper(ValueError("dict keys do not match values in 'item'"), loc=())], model=ModelData)
-        return model # model is already a mapped dict, of the same length as item      # type: ignore
+    # @validator('model', pre=True, always=True)
+    # @field_validator('model')
+    # @classmethod
+    # def default_model(cls, model: Any, values: dict[str,Any]) -> dict[str, str|list[dict[str,Any]]]:
+    #     if len(i:=values['item'].entries()) == 1 and isinstance(model, list) and isinstance(model[0], dict): # only one item id, predicate model allowed to be single list
+    #         return {i[0]: model}
+    #     if len(model)!=len(values["item"].entries()) and len(model)>1: # a single model name may be broadcast to all items, but otherwise lengths match       # type: ignore; ; 'model' inherits list[Unknown] from previous isinstance check
+    #         raise ValueError("length of 'item' and 'model' do not match")
+    #     if isinstance(model, list): # apply item->model map data
+    #         return dict(zip(values['item'].entries(), cycle(model))) # type: ignore;
+    #     if isinstance(model, dict) and set(model.keys())!=set(values['item'].entries()): # make sure the map keys match the item types       # type: ignore; ; model is Unknown type
+    #         raise ValueError("dict keys do not match values in 'item'")
+    #     return model # model is already a mapped dict, of the same length as item      # type: ignore;
     
-    @validator('template')
-    def enforce_custom_with_override_predicates(cls, template: 'str|TemplateOptions', values: dict[str,Any]) -> 'TemplateOptions':
-        if isinstance(values.get('model'), list) and template != "custom":
-            raise ValidationError([ErrorWrapper(ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'"), loc=())], model=ModelData)
-            # FIXME is this true anymore? I think this check is also wrong now
-        # find and apply proper submodel
-        name = template.name if isinstance(template, TemplateOptions) else template
-        try:
-            submodel = {m.name: m for m in TemplateOptions.__subclasses__()}[name]
-            return submodel.parse_obj(template.dict() if isinstance(template, TemplateOptions) else {"name": template})
-        except KeyError:
-            raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{name}' could not be found"), loc=())], model=ModelData)
+    # @field_validator('template')
+    # def enforce_custom_with_override_predicates(cls, template: 'str|TemplateOptions', values: dict[str,Any]) -> 'TemplateOptions':
+    #     if isinstance(values.get('model'), list) and template != "custom":
+    #         raise ValueError("specifying complex predicates in 'model' is not compatiable with templating. Option must be 'custom'")
+    #         # FIXME is this true anymore? I think this check is also wrong now
+    #     # find and apply proper submodel
+    #     name = template.name if isinstance(template, TemplateOptions) else template
+    #     try:
+    #         submodel = {m.name: m for m in TemplateOptions.__subclasses__()}[name]
+    #         return submodel.model_validate(template.dict() if isinstance(template, TemplateOptions) else {"name": template})
+    #     except KeyError:
+    #         raise ValueError(f"the specified template '{name}' could not be found")
     
-    @validator('transforms', each_item=True)
-    def apply_transform_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> 'None|TransformOptions':
-        # find and apply proper submodel
-        try:
-            submodel = {m.name: m for m in TransformOptions.__subclasses__()}[transform.name]
-            return submodel.parse_obj(transform.dict())
-        except KeyError:
-            raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{transform.name}' could not be found"), loc=())], model=ModelData)
+    # @field_validator('transforms', each_item=True)
+    # def apply_transform_submodel(cls, transform: 'TransformOptions', values: dict[str,Any]) -> 'None|TransformOptions':
+    #     # find and apply proper submodel
+    #     try:
+    #         submodel = {m.name: m for m in TransformOptions.__subclasses__()}[transform.name]
+    #         return submodel.model_validate(transform.dict())
+    #     except KeyError:
+    #         raise ValueError(f"the specified template '{transform.name}' could not be found")
     
-    @validator('textures', pre=True, always=True)
-    def default_texture(cls, textures: MapOption[str], values: dict[str,Any]) -> MapOption[str]:
-        empty_list = False
-        if textures is None: # type: ignore
-            empty_list = True
-        elif isinstance(textures, (list,dict)):
-            empty_list = len(textures)==0
-        elif isinstance(textures, MapOption): # type: ignore
-            empty_list = len(textures.entries())==0
-        if empty_list and isinstance(v:=values.get("reference"), str):
-            return MapOption(__root__=[v])
-        return textures
+    # @field_validator('textures')
+    # def default_texture(cls, textures: MapOption[str], values: dict[str,Any]) -> MapOption[str]:
+    #     empty_list = False
+    #     if textures is None: # type: ignore
+    #         empty_list = True
+    #     elif isinstance(textures, (list,dict)):
+    #         empty_list = len(textures)==0
+    #     elif isinstance(textures, MapOption): # type: ignore
+    #         empty_list = len(textures.entries())==0
+    #     if empty_list and isinstance(v:=values.get("reference"), str):
+    #         return MapOption(root=v)
+    #     return textures
 
-    def add_namespace(self, namespace: str) -> 'ModelData':
-        """Returns a new ModelData with the given given namespace applied to any fields"""
-        ret_dict = self.dict()
-        ret_dict["reference"] = add_namespace(self.reference, namespace)
-        ret_model = deepcopy(self.model.entries())
-        for i, model_name in enumerate(ret_model):
-            if isinstance(model_name, str):
-                ret_model[i] = add_namespace(model_name, namespace) # accessed by index to overwrite original
-            else: # isinstance(model_name, list[dict]), add namespace to buried model parameter
-                for predicated_model in model_name:
-                    if 'model' in predicated_model:
-                        predicated_model['model'] = add_namespace(predicated_model['model'], namespace)
-        ret_dict["model"] = ret_model
-        if self.textures:
-            if isinstance(self.textures.__root__, list):
-                ret_dict["textures"] = [add_namespace(t, namespace) for t in self.textures.entries()]
-            else: # isinstance(self.textures.__root__, dict):
-                ret_dict["textures"] = {k: add_namespace(v, namespace) for k, v in self.textures.items()}
-        ret_dict["template"] = self.template.add_namespace(namespace) # type: ignore ; pydantic validation ensures type is TemplateBase
-        return ModelData.parse_obj(ret_dict)
-    
-class NestedModelData(BaseModel):
-    """A potentially incomplete config, allowing for nested inheritance of fields"""
-    item: Optional[ListOption[str]]
-    reference: Optional[str]
-    model: Optional[Any] # defalts to reference, expects type of 'Optional[MapOption[str|list[dict[str,Any]]]]', but Pydantic casting caused unknown issues
-    template: Optional["str|TemplateOptions"] = "custom"
-    transforms: Optional[list['TransformOptions']]
-    textures: Optional[MapOption[str]]
-    broadcast: Optional[list['NestedModelData']] = []
+    # def add_namespace(self, namespace: str) -> 'ModelData':
+    #     """Returns a new ModelData with the given given namespace applied to any fields"""
+    #     ret_dict = self.dict()
+    #     ret_dict["reference"] = add_namespace(self.reference, namespace)
+    #     ret_model = deepcopy(self.model.entries())
+    #     for i, model_name in enumerate(ret_model):
+    #         if isinstance(model_name, str):
+    #             ret_model[i] = add_namespace(model_name, namespace) # accessed by index to overwrite original
+    #         else: # isinstance(model_name, list[dict]), add namespace to buried model parameter
+    #             for predicated_model in model_name:
+    #                 if 'model' in predicated_model:
+    #                     predicated_model['model'] = add_namespace(predicated_model['model'], namespace)
+    #     ret_dict["model"] = ret_model
+    #     if self.textures:
+    #         if isinstance(self.textures.__root__, list):
+    #             ret_dict["textures"] = [add_namespace(t, namespace) for t in self.textures.entries()]
+    #         else: # isinstance(self.textures.__root__, dict):
+    #             ret_dict["textures"] = {k: add_namespace(v, namespace) for k, v in self.textures.items()}
+    #     ret_dict["template"] = self.template.add_namespace(namespace) # type: ignore ; pydantic validation ensures type is TemplateBase
+    #     return ModelData.parse_obj(ret_dict)
 
-    def collapse_broadcast(self) -> list['NestedModelData']:
-        """Recursively collapses broadcast fields into a list of NestedModelData"""
-        if not self.broadcast:
-            return [self]
-        ret_list: list[NestedModelData] = []
-        for child in self.broadcast:
-            m = NestedModelData.parse_obj(self.dict(exclude_unset=True,exclude={"broadcast"}) | child.dict(exclude_unset=True))
-            if m.broadcast:
-                m = m.collapse_broadcast()
-                ret_list.extend(m)
-            else:
-                ret_list.append(m)
-        return ret_list
-    
-class GuiFont(BaseModel):
-    """config for a single container gui using custom fonts"""
-    translation: str
-    container: 'str|ContainerGuiOptions'
-    texture: str
 
-    @validator('container')
-    def resolve_container(cls, container: 'str|ContainerGuiOptions', values: dict[str,Any]) -> 'ContainerGuiOptions':
-        container_type = container.container if isinstance(container, ContainerGuiOptions) else container
-        try:
-            subclass = {m.container: m for m in ContainerGuiOptions.__subclasses__()}[container_type]
-            return subclass.parse_obj(container.dict() if isinstance(container, ContainerGuiOptions) else {"name": container})
-        except KeyError:
-            raise ValidationError([ErrorWrapper(ValueError(f"the specified template '{container_type}' could not be found"), loc=())], model=GuiFont)
+class NestedModelData():
+    pass
+# class NestedModelData(BaseModel):
+#     """A potentially incomplete config, allowing for nested inheritance of fields"""
+#     item: Optional[ListOption[str]]
+#     reference: Optional[str]
+#     model: Optional[Any] # defalts to reference, expects type of 'Optional[MapOption[str|list[dict[str,Any]]]]', but Pydantic casting caused unknown issues
+#     template: Optional["str|TemplateOptions"] = "custom"
+#     transforms: Optional[list['TransformOptions']]
+#     textures: Optional[MapOption[str]]
+#     broadcast: Optional[list['NestedModelData']] = []
+
+#     def collapse_broadcast(self) -> list['NestedModelData']:
+#         """Recursively collapses broadcast fields into a list of NestedModelData"""
+#         if not self.broadcast:
+#             return [self]
+#         ret_list: list[NestedModelData] = []
+#         for child in self.broadcast:
+#             m = NestedModelData.parse_obj(self.dict(exclude_unset=True,exclude={"broadcast"}) | child.dict(exclude_unset=True))
+#             if m.broadcast:
+#                 m = m.collapse_broadcast()
+#                 ret_list.extend(m)
+#             else:
+#                 ret_list.append(m)
+#         return ret_list
+    
+class GuiFont():
+    pass
+# class GuiFont(BaseModel):
+#     """config for a single container gui using custom fonts"""
+#     translation: str
+#     container: 'str|ContainerGuiOptions'
+#     texture: str
+
+#     @field_validator('container')
+#     def resolve_container(cls, container: 'str|ContainerGuiOptions', values: dict[str,Any]) -> 'ContainerGuiOptions':
+#         container_type = container.container if isinstance(container, ContainerGuiOptions) else container
+#         try:
+#             subclass = {m.container: m for m in ContainerGuiOptions.__subclasses__()}[container_type]
+#             return subclass.model_validate(container.dict() if isinstance(container, ContainerGuiOptions) else {"name": container})
+#         except KeyError:
+#             raise ValueError(f"the specified template '{container_type}' could not be found")
         
-    def add_namespace(self, namespace: str) -> 'GuiFont':
-        """returns a new GuiFont with the texture field namespaced"""
-        return GuiFont(
-            translation=self.translation,
-            container=self.container,
-            texture=add_namespace(self.texture, namespace)
-        )
+#     def add_namespace(self, namespace: str) -> 'GuiFont':
+#         """returns a new GuiFont with the texture field namespaced"""
+#         return GuiFont(
+#             translation=self.translation,
+#             container=self.container,
+#             texture=add_namespace(self.texture, namespace)
+#         )
 
+class FlatResourcePackOptions():
+    pass
+# class FlatResourcePackOptions(BaseModel):
+#     """Contains a flat list of complete rp config objects"""
+#     model_data: list[ModelData]
+#     gui_fonts: list[GuiFont]
 
-class FlatResourcePackOptions(BaseModel):
-    """Contains a flat list of complete rp config objects"""
-    model_data: list[ModelData]
-    gui_fonts: list[GuiFont]
-
-    def add_namespace(self, namespace:str):
-        self.model_data=[m.add_namespace(namespace) for m in self.model_data]
-        self.gui_fonts=[g.add_namespace(namespace) for g in self.gui_fonts]
+#     def add_namespace(self, namespace:str):
+#         self.model_data=[m.add_namespace(namespace) for m in self.model_data]
+#         self.gui_fonts=[g.add_namespace(namespace) for g in self.gui_fonts]
     
-    def template_mutations(self):
-        for m in self.model_data:
-            m.template.mutate_config(m) # type: ignore , model validation ensures tempalte is type TemplateOptions()
+#     def template_mutations(self):
+#         for m in self.model_data:
+#             m.template.mutate_config(m) # type: ignore , model validation ensures tempalte is type TemplateOptions()
 
-class ResourcePackOptions(PluginOptions, extra=Extra.ignore):
-    model_data: list[NestedModelData] = []
-    gui_fonts: list[GuiFont] = []
+# class ResourcePackOptions(PluginOptions, extra='ignore'):
+#     model_data: list[NestedModelData] = []
+#     gui_fonts: list[GuiFont] = []
 
-    def process_inheritance(self) -> FlatResourcePackOptions:
-        """Collapses and returns any broadcast fields into processed flat list"""
-        ret: list[ModelData] = []
-        errors: list[tuple[int, ValidationError]] = []
-        for i, model in enumerate(self.model_data):
-            try:
-                ret.extend([ModelData.parse_obj(m.dict()) for m in model.collapse_broadcast()])
-            except ValidationError as exc:
-                errors.append((i, exc))
+#     def process_inheritance(self) -> FlatResourcePackOptions:
+#         """Collapses and returns any broadcast fields into processed flat list"""
+#         ret: list[ModelData] = []
+#         errors: list[tuple[int, ValidationError]] = []
+#         for i, model in enumerate(self.model_data):
+#             try:
+#                 ret.extend([ModelData.parse_obj(m.dict()) for m in model.collapse_broadcast()])
+#             except ValidationError as exc:
+#                 errors.append((i, exc))
 
-        if errors: # generate traceback for configs missing information
-            wrapper_errors: list[ErrorWrapper] = []
-            for i, error in errors:
-                primary_loc = ("model_data", i)
-                s = format_validation_error("gm4", ValidationError(model=ModelData, errors=[
-                    ErrorWrapper(ValueError(e['msg']), loc=(*primary_loc,*e['loc']))
-                    for e in error.errors()
-                ]))
-                sub_explainations = "\n\t"+"\n\t".join(s.split("\n"))
-                wrapper_errors.append(ErrorWrapper(ValueError("a child inherited incomplete options:"+sub_explainations), loc=primary_loc))
-            complete_explaination = format_validation_error("gm4", ValidationError(model=ModelData, errors=wrapper_errors))
-            raise InvalidOptions("gm4", complete_explaination)
+#         if errors: # generate traceback for configs missing information
+#             wrapper_errors: list[ErrorWrapper] = []
+#             for i, error in errors:
+#                 primary_loc = ("model_data", i)
+#                 s = format_validation_error("gm4", ValidationError(model=ModelData, errors=[
+#                     ErrorWrapper(ValueError(e['msg']), loc=(*primary_loc,*e['loc']))
+#                     for e in error.errors()
+#                 ]))
+#                 sub_explainations = "\n\t"+"\n\t".join(s.split("\n"))
+#                 wrapper_errors.append(ErrorWrapper(ValueError("a child inherited incomplete options:"+sub_explainations), loc=primary_loc))
+#             complete_explaination = format_validation_error("gm4", ValidationError(model=ModelData, errors=wrapper_errors))
+#             raise InvalidOptions("gm4", complete_explaination)
         
-        return FlatResourcePackOptions(model_data=ret, gui_fonts=self.gui_fonts)
+#         return FlatResourcePackOptions(model_data=ret, gui_fonts=self.gui_fonts)
 
 #== Configurable Base Classes ==#
-class TemplateOptions(BaseModel, extra=Extra.allow):
-    """A pydantic model to extend for configured model templates, which generate model files for common"""
-    default_transforms: ClassVar[list['TransformOptions']] = []
-    name: ClassVar[str]
-    texture_map: ClassVar[list[str]|None] = None
+class TemplateOptions():
+    pass
+# class TemplateOptions(BaseModel, extra='allow'):
+#     """A pydantic model to extend for configured model templates, which generate model files for common"""
+#     default_transforms: ClassVar[list['TransformOptions']] = []
+#     name: ClassVar[str]
+#     texture_map: ClassVar[list[str]|None] = None
 
-    def __init_subclass__(cls) -> None:
-        cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
+#     def __init_subclass__(cls) -> None:
+#         cls.__config__.extra = 'ignore' # prevent subclasses from inheriting Extra.allow
 
-    def dict(self, **kwargs: Any) -> dict[str,Any]:
-        return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
+#     def dict(self, **kwargs: Any) -> dict[str,Any]:
+#         return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
 
-    def generate_model(self, config: ModelData, models_container: NamespaceProxy[Model]) -> None:
-        """Processes the template, and applies transforms"""
-        if self.texture_map and config.textures and isinstance(config.textures.__root__, list):
-            config = ModelData(**config.dict() | {"textures": dict(zip(self.texture_map, config.textures.entries()))})
-        for output_model in self.process(config, models_container): # for each returned pointer, add transforms as needed
-            if self.default_transforms:
-                for transform in self.default_transforms:
-                    transform.apply_transform(output_model)
-            if config.transforms:
-                for transform in config.transforms:
-                    transform.apply_transform(output_model)
+#     def generate_model(self, config: ModelData, models_container: NamespaceProxy[Model]) -> None:
+#         """Processes the template, and applies transforms"""
+#         if self.texture_map and config.textures and isinstance(config.textures.__root__, list):
+#             config = ModelData(**config.dict() | {"textures": dict(zip(self.texture_map, config.textures.entries()))})
+#         for output_model in self.process(config, models_container): # for each returned pointer, add transforms as needed
+#             if self.default_transforms:
+#                 for transform in self.default_transforms:
+#                     transform.apply_transform(output_model)
+#             if config.transforms:
+#                 for transform in config.transforms:
+#                     transform.apply_transform(output_model)
 
-    def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
-        """Overridden to create and mount the model object, and return pointers to them"""
-        raise NotImplementedError()
+#     def process(self, config: ModelData, models_container: NamespaceProxy[Model]) -> list[Model]:
+#         """Overridden to create and mount the model object, and return pointers to them"""
+#         raise NotImplementedError()
     
-    def add_namespace(self, namespace: str):
-        """Overridden to add namespace data to sub-config fields added by a template"""
-        return self.dict()
+#     def add_namespace(self, namespace: str):
+#         """Overridden to add namespace data to sub-config fields added by a template"""
+#         return self.dict()
     
-    def mutate_config(self, config: ModelData):
-        """Overridden to let a template mutate/mangle root level fields of ModelData"""
-        pass
+#     def mutate_config(self, config: ModelData):
+#         """Overridden to let a template mutate/mangle root level fields of ModelData"""
+#         pass
 
-class TransformOptions(BaseModel, extra=Extra.allow):
-    """A pydantic model to extend for configured model transformers, which add model offset/scale ect.. to model files"""
-    name: ClassVar[str]
-    def __init_subclass__(cls) -> None:
-        cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
+class TransformOptions():
+    pass
+# class TransformOptions(BaseModel, extra='allow'):
+#     """A pydantic model to extend for configured model transformers, which add model offset/scale ect.. to model files"""
+#     name: ClassVar[str]
+#     def __init_subclass__(cls) -> None:
+#         cls.__config__.extra = 'ignore' # prevent subclasses from inheriting Extra.allow
 
-    def dict(self, **kwargs: Any) -> dict[str,Any]:
-        return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
+#     def dict(self, **kwargs: Any) -> dict[str,Any]:
+#         return super().dict(**kwargs) | {"name": self.name} # ensure name class-var is preserved in dict-casting
     
-    def apply_transform(self, model: Model) -> None:
-        """Modifies the given model, applying transformation data to the display compound"""
-        raise NotImplementedError()
+#     def apply_transform(self, model: Model) -> None:
+#         """Modifies the given model, applying transformation data to the display compound"""
+#         raise NotImplementedError()
 
-class ContainerGuiOptions(BaseModel, extra=Extra.allow):
-    """a pydantic model to extend for container gui fonts"""
-    container: ClassVar[str]
-    def __init_subclass__(cls) -> None:
-        cls.__config__.extra = Extra.ignore # prevent subclasses from inheriting Extra.allow
+class ContainerGuiOptions():
+    pass
+# class ContainerGuiOptions(BaseModel, extra='allow'):
+#     """a pydantic model to extend for container gui fonts"""
+#     container: ClassVar[str]
+#     def __init_subclass__(cls) -> None:
+#         cls.__config__.extra = 'ignore' # prevent subclasses from inheriting Extra.allow
 
-    def process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[dict[str,Any]]]:
-        """requisitions unicode characters and returns the translation and font providers that make it up"""
-        raise NotImplementedError()
+#     def process(self, config: GuiFont, counter_cache: Cache) -> tuple[str, list[dict[str,Any]]]:
+#         """requisitions unicode characters and returns the translation and font providers that make it up"""
+#         raise NotImplementedError()
     
-    def next_unicode(self, counter_cache: Cache) -> str:
-        ret = counter_cache.json["__next__"]
-        counter_cache.json["__next__"] += 1
-        return chr(ret)
+#     def next_unicode(self, counter_cache: Cache) -> str:
+#         ret = counter_cache.json["__next__"]
+#         counter_cache.json["__next__"] += 1
+#         return chr(ret)
 
-    def dict(self, **kwargs: Any) -> dict[str,Any]:
-        return super().dict(**kwargs) | {"container": self.container} # ensure name class-var is preserved in dict-casting
+#     def dict(self, **kwargs: Any) -> dict[str,Any]:
+#         return super().dict(**kwargs) | {"container": self.container} # ensure name class-var is preserved in dict-casting
     
     
-NestedModelData.update_forward_refs()
-ModelData.update_forward_refs()
-GuiFont.update_forward_refs()
+# NestedModelData.model_rebuild()
+# ModelData.model_rebuild()
+# GuiFont.model_rebuild()
 
 #== Beet Plugins ==#
 def beet_default(ctx: Context):
@@ -704,16 +716,17 @@ class ItemDisplayModel(TransformOptions):
 
 #== Convience Template/Transform Presets ==#
 class LegacyMachineArmorStand(BlockTemplate, TemplateOptions):
-    """An 'block' template preset with the 'item_display' transformer for the legacy small-armor-stand-head-slot of custom crafters"""
-    default_transforms = [
-        ItemDisplayModel(
-            origin=[0.5, 1, 0.5],
-            scale=[0.438, 0.438, 0.438],
-            translation=[0, 0, 0],
-            display='head'
-        )
-    ]
-    name = "legacy_machine_block"
+    pass
+    # """An 'block' template preset with the 'item_display' transformer for the legacy small-armor-stand-head-slot of custom crafters"""
+    # default_transforms = [
+    #     ItemDisplayModel(
+    #         origin=[0.5, 1, 0.5],
+    #         scale=[0.438, 0.438, 0.438],
+    #         translation=[0, 0, 0],
+    #         display='head'
+    #     )
+    # ]
+    # name = "legacy_machine_block"
 
 
 #== Default Gui-Font Generators ==#
