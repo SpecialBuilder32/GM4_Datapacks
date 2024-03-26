@@ -1,5 +1,6 @@
 from gm4_liquid_tanks:liquid_wrappers import liquid
 
+bucket = liquid.standard_unit('bucket', 3)
 
 @liquid
 class Lava:
@@ -10,3 +11,21 @@ class Lava:
     liquid.init()
 
     liquid.item_fill('bucket', 'lava_bucket', 3)
+
+@liquid
+class Water:
+    id = 'water'
+    name = 'Water'
+    capacity = 300
+
+    liquid.init()
+    liquid.item_fill('bucket', 'water_bucket', 3)
+
+@liquid
+class Milk:
+    id = 'milk'
+    name = 'Milk'
+    capacity = 300
+
+    liquid.init()
+    liquid.item_fill('bucket', 'milk_bucket', 4)
