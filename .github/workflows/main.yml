@@ -2,7 +2,7 @@ name: Build modules
 
 on:
   push:
-    branches: [ master, ver/* ]
+    branches: [ master, ver/*, action-test-branch ]
   pull_request:
   workflow_dispatch:
 

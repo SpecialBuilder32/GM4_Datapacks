@@ -180,6 +180,14 @@ def update_patch(ctx: Context):
     new_hash = hashlib.sha1(fileobj.getvalue()).hexdigest()
     pack.hash = new_hash
 
+	# DEBUG save out zipped pack
+    try:
+        os.mkdir("release/patch_check")
+    except:
+        pass
+    with open(f"release/patch_check/{ctx.project_id}.zip", "wb+") as f:
+        f.write(fileobj.getbuffer())
+
     # first release of a module
     if not released:
         pack.version = pack.version.replace("X", "0")
