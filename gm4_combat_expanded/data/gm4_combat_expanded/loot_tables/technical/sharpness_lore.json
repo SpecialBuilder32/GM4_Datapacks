@@ -12,10 +12,11 @@
       "functions": [
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -77,10 +78,11 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -142,10 +144,11 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -207,10 +210,11 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -260,10 +264,11 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [
@@ -313,10 +318,11 @@
         },
         {
           "function": "minecraft:set_lore",
+          "mode": "append",
           "entity": "this",
           "lore": [
             [
-              "",
+              " ",
               {
                 "translate": "attribute.modifier.equals.0",
                 "with": [

@@ -8,7 +8,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:weapon/pickaxe/diamond",
+              "value": "gm4_combat_expanded:weapon/pickaxe/diamond",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -25,27 +25,40 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/axe/diamond",
+                  "value": "gm4_combat_expanded:weapon/axe/diamond",
                   "conditions": [
                     {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.10
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:binomial",
+                        "n": 1,
+                        "p": {
+                          "type": "minecraft:score",
+                          "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$difficulty"
+                          },
+                          "score": "gm4_ce_data",
+                          "scale": 0.0025
+                        }
+                      },
+                      "range": 1
                     }
                   ]
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/shovel/diamond",
+                  "value": "gm4_combat_expanded:weapon/shovel/diamond",
                   "conditions": [
                     {
                       "condition": "minecraft:random_chance",
-                      "chance": 0.60
+                      "chance": 0.33
                     }
                   ]
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/sword/diamond"
+                  "value": "gm4_combat_expanded:weapon/sword/diamond"
                 }
               ]
             }

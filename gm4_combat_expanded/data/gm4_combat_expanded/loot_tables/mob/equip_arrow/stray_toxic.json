@@ -8,11 +8,43 @@
           "name": "minecraft:tipped_arrow",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:18,Amplifier:0b,Duration:100},{Id:19,Amplifier:1b,Duration:100},{Id:2,Amplifier:0b,Duration:600}],CustomPotionColor:5149489,HideFlags:32}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 8889187,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:weakness",
+                      "amplifier": 0,
+                      "duration": 100,
+                      "show_particles": true,
+                      "show_icon": true,
+                      "ambient": false
+                    },
+                    {
+                      "id": "minecraft:poison",
+                      "amplifier": 1,
+                      "duration": 100,
+                      "show_particles": true,
+                      "show_icon": true,
+                      "ambient": false
+                    },
+                    {
+                      "id": "minecraft:slowness",
+                      "amplifier": 0,
+                      "duration": 600,
+                      "show_particles": true,
+                      "show_icon": true,
+                      "ambient": false
+                    }
+                  ]
+                },
+                "minecraft:hide_additional_tooltip": {}
+              }
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "potion.withDuration",
@@ -90,6 +122,13 @@
               "name": {
                 "translate": "item.minecraft.tipped_arrow.effect.poison",
                 "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 4
               }
             }
           ]

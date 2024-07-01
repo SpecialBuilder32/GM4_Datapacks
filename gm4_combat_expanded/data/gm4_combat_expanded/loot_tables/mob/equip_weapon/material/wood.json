@@ -8,7 +8,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:weapon/pickaxe/wood",
+              "value": "gm4_combat_expanded:weapon/pickaxe/wood",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -25,41 +25,40 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/axe/wood",
+                  "value": "gm4_combat_expanded:weapon/axe/wood",
                   "conditions": [
                     {
                       "condition": "minecraft:value_check",
                       "value": {
-                        "type": "minecraft:score",
-                        "target": {
-                          "type": "minecraft:fixed",
-                          "name": "$difficulty"
-                        },
-                        "score": "gm4_ce_data"
+                        "type": "minecraft:binomial",
+                        "n": 1,
+                        "p": {
+                          "type": "minecraft:score",
+                          "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$difficulty"
+                          },
+                          "score": "gm4_ce_data",
+                          "scale": 0.0025
+                        }
                       },
-                      "range": {
-                        "min": 4
-                      }
-                    },
-                    {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.10
+                      "range": 1
                     }
                   ]
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/shovel/wood",
+                  "value": "gm4_combat_expanded:weapon/shovel/wood",
                   "conditions": [
                     {
                       "condition": "minecraft:random_chance",
-                      "chance": 0.60
+                      "chance": 0.33
                     }
                   ]
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/sword/wood"
+                  "value": "gm4_combat_expanded:weapon/sword/wood"
                 }
               ]
             }
