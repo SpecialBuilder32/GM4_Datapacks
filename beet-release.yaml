@@ -74,8 +74,6 @@ pipeline:
       - gm4.plugins.write_mcmeta
       - gm4.plugins.worker.store_project
 
-  - gm4.plugins.worker.store_project
-
   - extend: beet.yaml
     directory: resource_pack
     require:
@@ -86,8 +84,6 @@ pipeline:
       - gm4.plugins.resource_pack.pad_model_overrides
     meta:
       pack_scan: resource_pack
-
-  - gm4.plugins.manifest.write_meta
 
   - gm4.plugins.manifest.write_meta
 

@@ -1,8 +1,11 @@
 id: gm4_combat_expanded
 name: Combat Expanded
-version: 1.4.X
+version: 2.1.X
 
 data_pack:
+  load: .
+
+resource_pack:
   load: .
 
 pipeline:
@@ -14,13 +17,12 @@ meta:
   gm4:
     versioning:
       required:
-        lib_forceload: 1.1.0
-        lib_lore: 1.0.0
+        lib_forceload: 1.3.0
+        lib_lore: 1.1.0
       schedule_loops: 
         - tick
         - main
         - slow_clock
-        - player/submain
     website:
       description: Use special armor and weapon modifiers to defend against mobs that grow ever stronger.
       recommended:
@@ -35,16 +37,13 @@ meta:
     model_data:
       - template: advancement
         broadcast:
-        - item: clock
-          reference: gui/advancement/combat_expanded_challenger
-        - item: iron_chestplate
-          reference: gui/advancement/combat_expanded_full_set
-        - item: shield
-          reference: gui/advancement/combat_expanded_guardian
         - item: leather_chestplate
           reference: gui/advancement/combat_expanded_identify
-        - item: clock
-          reference: gui/advancement/combat_expanded_survive
+    translation_linter_ignores:
+      - enchantment.level.14
+      - enchantment.level.15
+      - enchantment.level.16
+      - enchantment.level.17
   modrinth:
     project_id: zgxd3poi
   smithed:

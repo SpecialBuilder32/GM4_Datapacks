@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:leather_chestplate",
-      "nbt": "{CustomModelData:'gui/advancement/combat_expanded_identify'}"
+      "id": "minecraft:leather_chestplate",
+      "components": {
+        "minecraft:custom_model_data": "gui/advancement/combat_expanded_identify"
+      }
     },
     "title": {
       "translate": "advancement.gm4.combat_expanded.identify.title",
@@ -10,15 +12,24 @@
     },
     "description": {
       "translate": "advancement.gm4.combat_expanded.identify.description",
-      "fallback": "Identify a weapon or piece of armor looted from a mob",
+      "fallback": "Obtain a Modified weapon or piece of armor from a mob",
       "color": "gray"
     },
     "frame": "task"
   },
   "parent": "gm4:root",
   "criteria": {
-    "identify": {
-      "trigger": "minecraft:impossible"
+    "full_set": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": "{gm4_combat_expanded:{}}"
+            }
+          }
+        ]
+      }
     }
   }
 }

@@ -8,11 +8,28 @@
           "name": "minecraft:tipped_arrow",
           "functions": [
             {
-              "function": "minecraft:set_nbt",
-              "tag": "{CustomPotionEffects:[{Id:2,Amplifier:0b,Duration:600}],Potion:\"minecraft:harming\",HideFlags:32,CustomPotionColor:4393481}"
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:harming",
+                  "custom_color": 11101546,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:slowness",
+                      "amplifier": 0,
+                      "duration": 600,
+                      "show_particles": true,
+                      "show_icon": true,
+                      "ambient": false
+                    }
+                  ]
+                },
+                "minecraft:hide_additional_tooltip": {}
+              }
             },
             {
               "function": "minecraft:set_lore",
+              "mode": "append",
               "lore": [
                 {
                   "translate": "potion.withDuration",
@@ -54,6 +71,13 @@
               "name": {
                 "translate": "item.minecraft.tipped_arrow.effect.harming",
                 "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 8
               }
             }
           ]

@@ -9,23 +9,27 @@
           "name": "minecraft:wooden_sword",
           "functions": [
             {
-              "function": "minecraft:set_name",
+              "function": "minecraft:set_lore",
+              "mode": "append",
               "entity": "this",
-              "name": [
+              "lore": [
                 {
-                  "translate": "item.gm4.combat_expanded.name.unidentified",
-                  "fallback": "Unidentified %s",
+                  "translate": "item.gm4.combat_expanded.lore.unidentified",
+                  "fallback": "%s Unidentified Item - Drop to Identify",
                   "with": [
                     {
-                      "translate": "item.minecraft.wooden_sword"
+                      "text": "⚠",
+                      "color": "red",
+                      "italic": false
                     }
                   ],
+                  "color": "dark_red",
                   "italic": false
                 }
               ]
             },
             {
-              "function": "minecraft:set_nbt",
+              "function": "minecraft:set_custom_data",
               "tag": "{gm4_combat_expanded:{identified:0,damage:40,atkspeed:16,strike:1,modifier:0,name:'{\"italic\":false,\"translate\":\"item.minecraft.wooden_sword\"}'}}"
             },
             {
@@ -38,7 +42,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 0.5
+                  "scale": 0.05
                 },
                 "max": {
                   "type": "minecraft:score",
@@ -47,7 +51,7 @@
                     "name": "$difficulty"
                   },
                   "score": "gm4_ce_data",
-                  "scale": 2.5
+                  "scale": 0.25
                 }
               },
               "treasure": false,
@@ -69,8 +73,21 @@
                   "name": "gm4_combat_expanded:mob/modifier/mountainous"
                 },
                 {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.4
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 0.004
+                    }
+                  },
+                  "range": 1
                 }
               ]
             },
@@ -85,8 +102,21 @@
                   "name": "gm4_combat_expanded:mob/modifier/burned"
                 },
                 {
-                  "condition": "minecraft:random_chance",
-                  "chance": 0.5
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:binomial",
+                    "n": 1,
+                    "p": {
+                      "type": "minecraft:score",
+                      "target": {
+                        "type": "minecraft:fixed",
+                        "name": "$difficulty"
+                      },
+                      "score": "gm4_ce_data",
+                      "scale": 0.004
+                    }
+                  },
+                  "range": 1
                 }
               ]
             }

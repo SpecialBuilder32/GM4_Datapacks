@@ -8,7 +8,7 @@
           "children": [
             {
               "type": "minecraft:loot_table",
-              "name": "gm4_combat_expanded:weapon/pickaxe/gold",
+              "value": "gm4_combat_expanded:weapon/pickaxe/gold",
               "conditions": [
                 {
                   "condition": "minecraft:reference",
@@ -25,27 +25,40 @@
               "children": [
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/axe/gold",
+                  "value": "gm4_combat_expanded:weapon/axe/gold",
                   "conditions": [
                     {
-                      "condition": "minecraft:random_chance",
-                      "chance": 0.10
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:binomial",
+                        "n": 1,
+                        "p": {
+                          "type": "minecraft:score",
+                          "target": {
+                            "type": "minecraft:fixed",
+                            "name": "$difficulty"
+                          },
+                          "score": "gm4_ce_data",
+                          "scale": 0.0025
+                        }
+                      },
+                      "range": 1
                     }
                   ]
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/shovel/gold",
+                  "value": "gm4_combat_expanded:weapon/shovel/gold",
                   "conditions": [
                     {
                       "condition": "minecraft:random_chance",
-                      "chance": 0.60
+                      "chance": 0.33
                     }
                   ]
                 },
                 {
                   "type": "minecraft:loot_table",
-                  "name": "gm4_combat_expanded:weapon/sword/gold"
+                  "value": "gm4_combat_expanded:weapon/sword/gold"
                 }
               ]
             }
