@@ -19,7 +19,9 @@ class Water:
     capacity = 300
 
     liquid.init()
+
     liquid.item_fill('bucket', 'water_bucket', 3)
+    liquid.item_fill('glass_bottle', 'minecraft:potion[potion_contents={potion:"water"},name="Test"]', 1)
 
 @liquid
 class Milk:
