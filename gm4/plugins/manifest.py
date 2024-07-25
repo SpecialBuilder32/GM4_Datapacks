@@ -3,6 +3,7 @@ import hashlib
 import json
 import logging
 import os
+import sys
 from gzip import GzipFile
 from io import BytesIO
 from pathlib import Path
@@ -15,11 +16,12 @@ from nbtlib.contrib.minecraft import StructureFileData, StructureFile  # type: i
 from pydantic.v1 import BaseModel, Extra
 from repro_zipfile import ReproducibleZipFile  # type: ignore ; no stub
 
-from gm4.plugins.output import ModrinthConfig, PMCConfig, SmithedConfig
 from gm4.plugins.versioning import VersioningConfig
 from gm4.utils import Version, run
 
 parent_logger = logging.getLogger("gm4.manifest")
+
+SUPPORTED_GAME_VERSIONS = ["1.21"]
 
 # config models for beet.yaml metas
 CreditsModel = dict[str, list[str]]
@@ -28,12 +30,26 @@ class WebsiteConfig(PluginOptions):
 	description: str
 	recommended: list[str] = []
 	notes: list[str] = []
-	hidden: bool = False
 	search_keywords: list[str] = []
 
+class ModrinthConfig(PluginOptions):
+	project_id: str
+
+class SmithedConfig(PluginOptions):
+	pack_id: str
+
+class PMCConfig(PluginOptions):
+	uid: int
+
 class ManifestConfig(PluginOptions, extra=Extra.ignore):
+	minecraft: list[str] = SUPPORTED_GAME_VERSIONS
 	versioning: Optional[VersioningConfig]
-	website: WebsiteConfig
+	# distribution
+	website: Optional[WebsiteConfig]
+	modrinth: Optional[ModrinthConfig]
+	smithed: Optional[SmithedConfig]
+	pmc: Optional[PMCConfig]
+	# promo
 	video: str|None
 	wiki: str|None
 	credits: CreditsModel
@@ -51,6 +67,7 @@ class ManifestModuleModel(BaseModel):
 	requires: list[str] = []
 	description: str
 	recommends: list[str] = []
+	minecraft: list[str] = []
 	hidden: bool = False
 	important_note: Optional[str]
 	search_keywords: list[str] = []
@@ -81,19 +98,11 @@ def create(ctx: Context):
 	manifest = ManifestCacheModel(last_commit=run(["git", "rev-parse", "HEAD"]), modules={}, libraries={}, base={}, contributors=None)
 	logger = parent_logger.getChild("create")
 
-	LIB_OVERRIDES: dict[Any, Any] = {
-		"website": {"description": "", "recommended": [], "notes": []},
-		"video": None, "wiki": None
-	}
-
-	for glob, manifest_section, config_overrides in [("gm4_*", manifest.modules, {}), ("lib_*", manifest.libraries, LIB_OVERRIDES), ("resource_pack", manifest.modules, {})]:
+	for glob, manifest_section in [("gm4_*", manifest.modules), ("lib_*", manifest.libraries), ("resource_pack", manifest.modules)]:
 		for pack_id in [p.name for p in sorted(ctx.directory.glob(glob))]:
 			try:
 				config = load_config(Path(pack_id) / "beet.yaml")
-				gm4_meta = ctx.validate("gm4", validator=ManifestConfig, options=config.meta["gm4"]|config_overrides) # manually parse config into models  
-				modrinth_meta = ctx.validate("modrinth", validator=ModrinthConfig, options=config.meta.get("modrinth"))
-				smithed_meta = ctx.validate("smithed", validator=SmithedConfig, options=config.meta.get("smithed"))
-				pmc_meta = ctx.validate("pmc", validator=PMCConfig, options=config.meta.get("pmc"))
+				gm4_meta = ctx.validate("gm4", validator=ManifestConfig, options=config.meta["gm4"]) # manually parse config into models  
 
 				manifest_section[pack_id] = ManifestModuleModel(
 					id = config.id,
@@ -104,15 +113,16 @@ def create(ctx: Context):
 					wiki_link = gm4_meta.wiki or "",
 					credits = gm4_meta.credits,
 					requires = [e for e in gm4_meta.versioning.required.keys() if not e.startswith("lib")] if gm4_meta.versioning else [],
-					description = gm4_meta.website.description,
-					recommends = gm4_meta.website.recommended,
-					important_note = gm4_meta.website.notes[0] if len(gm4_meta.website.notes)>0 else None,
-					hidden = gm4_meta.website.hidden,
+					description = gm4_meta.website.description if gm4_meta.website else "",
+					recommends = gm4_meta.website.recommended if gm4_meta.website else [],
+					important_note = gm4_meta.website.notes[0] if gm4_meta.website and len(gm4_meta.website.notes) > 0 else None,
+					minecraft = gm4_meta.minecraft,
+					hidden = len(gm4_meta.minecraft) == 0 or gm4_meta.website is None,
 					publish_date = None,
-					search_keywords = gm4_meta.website.search_keywords,
-					modrinth_id = modrinth_meta.project_id,
-					smithed_link = smithed_meta.pack_id,
-					pmc_link = pmc_meta.uid
+					search_keywords = gm4_meta.website.search_keywords if gm4_meta.website else [],
+					modrinth_id = gm4_meta.modrinth.project_id if gm4_meta.modrinth else None,
+					smithed_link = gm4_meta.smithed.pack_id if gm4_meta.smithed else None,
+					pmc_link = gm4_meta.pmc.uid if gm4_meta.pmc else None,
 				)
 			except InvalidProjectConfig as exc:
 				logger.debug(exc.explanation)
@@ -135,7 +145,7 @@ def create(ctx: Context):
 	ctx.cache["gm4_manifest"].json = manifest.dict()
 
 	# Read in the previous manifest, if found
-	version = os.getenv("VERSION", "1.20")
+	version = os.getenv("VERSION", "1.21")
 	release_dir = Path('release') / version
 	manifest_file = release_dir / "meta.json"
 
@@ -143,7 +153,11 @@ def create(ctx: Context):
 		ctx.cache["previous_manifest"].json = json.loads(manifest_file.read_text())
 	else:
 		if not ctx.meta.get("gm4_dev"):
-			logger.warn("No existing meta.json manifest file was located")
+			if os.getenv("MASTER_BUILD"): # gh actions is building - forgetting to add a meta.json breaks things
+				logger.error("No existing meta.json manifest file was located. Build was cancelled to avoid faulty releases.")
+				sys.exit(1) # quit the build and mark the github action as failed
+			else:
+				logger.warn("No existing meta.json manifest file was located")
 		ctx.cache["previous_manifest"].json = ManifestFileModel(last_commit="",modules=[],libraries={},contributors=[]).dict()
 
 	
@@ -191,7 +205,7 @@ def update_patch(ctx: Context):
     # first release of a module
     if not released:
         pack.version = pack.version.replace("X", "0")
-        logger.debug(f"First release of {ctx.project_id}")
+        logger.debug(f"First release of {ctx.project_id}", extra={"project_id": ctx.project_id})
 
     # otherwise check for changes
     else:
@@ -213,7 +227,7 @@ def update_patch(ctx: Context):
 
 def write_meta(ctx: Context):
 	"""Write the updated meta.json file."""
-	version = os.getenv("VERSION", "1.20")
+	version = os.getenv("VERSION", "1.21")
 	release_dir = Path('release') / version
 	os.makedirs(release_dir, exist_ok=True)
 
@@ -262,7 +276,7 @@ def write_credits(ctx: Context):
 
 def write_updates(ctx: Context):
 	"""Writes the module update commands to this module's init function."""
-	init = ctx.data.functions.get(f"{ctx.project_id}:init", None)
+	init = ctx.data.function.get(f"{ctx.project_id}:init", None)
 	if init is None:
 		return
 

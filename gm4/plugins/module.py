@@ -8,13 +8,15 @@ def default_pack_icon(ctx: Context):
 
 def gm4_root_advancement(ctx: Context):
     """Adds the root display advancement gm4:root, if the module has any display advancements"""
-    if len(ctx.data["gm4"].advancements.keys()) > 0:
-        ctx.data.advancements["gm4:root"] = Advancement(
+    if len(ctx.data["gm4"].advancement.keys()) > 0:
+        ctx.data.advancement["gm4:root"] = Advancement(
             {
                 "display": {
                     "icon": {
-                        "item": "command_block",
-                        "nbt": "{CustomModelData:3420001}"
+                        "id": "command_block",
+                        "components": {
+                            "minecraft:custom_model_data": 3420001
+                        }
                     },
                     "title": {
                         "translate": "advancement.gm4.root.title",
@@ -26,12 +28,12 @@ def gm4_root_advancement(ctx: Context):
                         "color": "gray"
                     },
                     "background": "textures/block/light_blue_concrete_powder.png",
-                        "announce_to_chat": False
+                    "announce_to_chat": False
                 },
                 "criteria": {
                     "automatic": {
                         "trigger": "minecraft:tick"
                     }
                 }
-                }
+            }
         )

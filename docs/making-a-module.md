@@ -131,8 +131,8 @@ All text visible to survival players (names, lore, actionbar, advancements) shou
 ```
 Additionally, every translation key defined by your data pack should be listed in the `translations.csv` babelbox file, along with its fallback as the `en_us` translation.
 
-### CustomModelData
-Gamemode 4 uses a custom beet plugin that enables the use of string references instead of hard-to-remember integers when dealing with CustomModelData. After configuring the CustomModelData values your data pack will use in the `beet.yaml` or `model_data`.yaml files, the plugin will auto-assign the unique integer values and substitute them into the data pack output by the beet build process. 
+### Custom model data
+Gamemode 4 uses a custom beet plugin that enables the use of string references instead of hard-to-remember integers when dealing with custom model data. After configuring the custom model data values your data pack will use in the `beet.yaml` or `model_data`.yaml files, the plugin will auto-assign the unique integer values and substitute them into the data pack output by the beet build process. 
 
 As a simple example:
 ```yaml
@@ -144,7 +144,7 @@ meta:
         reference: gm4_bat_grenades:item/bat_leather
 ```
 ```mcfunction
-give @s rabbit_hide 1 {CustomModelData:'gm4_bat_grenades:item/bat_leather'}
+give @s rabbit_hide[custom_model_data="gm4_bat_grenades:item/bat_leather"]
 ```
 
 This plugin also has infrastructure to auto-generate most parts of the resource pack. For more advanced usage, refer to [Resource Pack Management](./resource-pack-management.md)
@@ -153,7 +153,7 @@ This plugin also has infrastructure to auto-generate most parts of the resource 
 Each Gamemode 4 module must include guidebook pages to aid in the explaination and progression of the module. Details on how to add a section to the guidebook can be found in [`gm4_guidebook/CONTRIBUTING.md`](https://github.com/Gamemode4Dev/GM4_Datapacks/blob/master/gm4_guidebook/CONTRIBUTING.md).
 
 ### Tests
-Automated tests for modules should be added in the `data/gm4_module_id/tests` folder. The tests will automatically run in GitHub Actions when you submit a PR. For local development and for the full documentation, see the [PackTest](https://github.com/misode/packtest) project.
+Automated tests for modules should be added in the `data/gm4_module_id/test` folder. The tests will automatically run in GitHub Actions when you submit a PR. For local development and for the full documentation, see the [PackTest](https://github.com/misode/packtest) project.
 
 ## Submitting a pull request
 At any point when you feel the module is ready to recieve feedback or testing, you can create a pull request. You can still make changes afterwards.
