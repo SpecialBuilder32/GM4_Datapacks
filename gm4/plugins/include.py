@@ -9,6 +9,7 @@ __path__ = ""
 def __getattr__(name: str): # redirect plugin calls to the right library dynamically
     def plugin(ctx: Context):
         # load subproject, if not already present
+        print(f"running include.plugin on {name}")
         added_libs = ctx.cache['currently_building'].json['added_libs']
         if name not in added_libs:
             ctx.require(subproject({'directory': f'../{name}', 'extend': 'beet.yaml'}))
