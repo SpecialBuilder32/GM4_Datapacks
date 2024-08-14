@@ -11,7 +11,7 @@ def beet_default(ctx: Context):
     
     vanilla = ctx.inject(Vanilla)
     item_tags = vanilla.mount("data/minecraft/tags/item").data.item_tags
-    recipes = vanilla.mount("data/minecraft/recipe").data.recipes
+    recipes = vanilla.mount("data/minecraft/recipe").data.recipe
 
     def recursive_apply(items: list[str], dir: str, shape: list[str], output_count: int):
         for item in items:
