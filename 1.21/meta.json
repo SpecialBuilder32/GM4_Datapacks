@@ -1,11 +1,11 @@
 {
-  "last_commit": "d5ae2ef93be52f3c239679ff78971eebc65c11e4",
+  "last_commit": "fd51c5e5d8bd7477cfabd7294407e5af9049f5c4",
   "modules": [
     {
       "id": "gm4_animi_shamir",
       "name": "Animi Shamir",
-      "version": "1.4.3",
-      "hash": "ab7be97cebbd74557c26fda65ab302cd3ef76d03",
+      "version": "1.4.4",
+      "hash": "11428ae57dde1f55dbb14ee4baa3b4f247df05be",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
       "credits": {
@@ -22,7 +22,8 @@
       "description": "Adds the Animi Shamir to Metallurgy. Items with Animi will respawn with you when you die!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
@@ -57,7 +58,8 @@
         "gm4_podzol_rooting_soil"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
@@ -88,7 +90,8 @@
       "description": "Adds the shamir 'Audere' to Metallurgy. Gain Haste with low durability tools.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -135,7 +138,8 @@
         "gm4_liquid_tanks"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -161,7 +165,8 @@
       "description": "Looking for exotic animals? This module makes some Wandering Traders sell cute baby animals!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -193,7 +198,8 @@
         "gm4_metallurgy"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
@@ -222,7 +228,8 @@
       "description": "Adds a handy tooltip to Beehive items, telling you exactly how many bees and how much honey is stored inside! A beekeepers' dream!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -259,7 +266,8 @@
         "gm4_particles_pack"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -295,7 +303,8 @@
         "gm4_enderman_support_class"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -348,7 +357,8 @@
         "gm4_liquid_tanks"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -380,7 +390,8 @@
         "gm4_resource_pack"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -406,7 +417,8 @@
       "description": "See what's in your Chiseled Bookshelves without having to take all the books out!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -443,7 +455,8 @@
         "gm4_standard_crafting"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -475,7 +488,8 @@
         "gm4_zauber_cauldrons"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -506,7 +520,8 @@
       "description": "Allows Liquid Tanks to convert Concrete Powder items into Concrete, at the cost of \u2153 of a Bucket of Water per Concrete Powder.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -539,7 +554,8 @@
         "gm4_holographic_tags"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -603,7 +619,8 @@
         "gm4_tower_structures"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -632,7 +649,8 @@
       "description": "Allows Campfires to grant you up to 4 extra hearts that last for more than half of a Minecraft day. Perfect for those scary first nights in a Minecraft world.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -662,7 +680,8 @@
       "description": "Shoot more than just arrows! Crossbow Cartridges allows your crossbow to fire a variety of projectiles; Shoot Pufferfish, Tripwires, Torches, and many more. Synergizes nicely with the Ziprails Module for easy Ziprail construction.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -697,7 +716,8 @@
         "gm4_cooler_caves"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -733,7 +753,8 @@
         "gm4_boots_of_ostara"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -784,7 +805,8 @@
         "gm4_liquid_tanks"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -818,7 +840,8 @@
         "gm4_holographic_tags"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -847,7 +870,8 @@
       "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -878,7 +902,8 @@
         "gm4_book_binders"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -904,7 +929,8 @@
       "description": "Start your own Dripleaf Space Program!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -956,7 +982,8 @@
         "gm4_liquid_tanks"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -987,7 +1014,8 @@
         "gm4_resource_pack"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1038,7 +1066,8 @@
         "gm4_liquid_tanks"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1069,7 +1098,8 @@
         "gm4_bat_grenades"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1101,7 +1131,8 @@
         "gm4_resource_pack"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1153,7 +1184,8 @@
         "gm4_liquid_tanks"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1185,7 +1217,8 @@
       "description": "Adds the shamir 'Fulcio' to Metallurgy. It allows you to place blocks in mid-air! This also enables you to choose the orientation of blocks like logs without needing a supporting block.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1265,7 +1298,8 @@
         "gm4_liquid_tanks"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1278,8 +1312,8 @@
     {
       "id": "gm4_holographic_tags",
       "name": "Holographic Tags",
-      "version": "1.4.2",
-      "hash": "e67f1110dd8425ec98e258966c100ca1836f7842",
+      "version": "1.4.3",
+      "hash": "00adc43554b9f535addea6bcecd9ee203d0edf7a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Holographic_Tags",
       "credits": {
@@ -1297,7 +1331,8 @@
       "description": "Set up floating messages with a simple name tag!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1328,7 +1363,8 @@
       "description": "Adds the 'Iacio' shamir to Metallurgy. It lets you throw things further! Launch an Ender Pearl into orbit or simply throw your Trident exceptionally far.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1360,7 +1396,8 @@
       "description": "Improves the vanilla ink effect by adding Blindness. Glow Squid will give Night Vision when disturbed, which might come in handy if you're out of torches!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1396,7 +1433,8 @@
         "gm4_spawner_minecarts"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
@@ -1433,7 +1471,8 @@
         "gm4_potion_liquids"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1477,7 +1516,8 @@
         "gm4_relocators"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1506,7 +1546,8 @@
       "description": "Catch live fish when fishing! But watch out for Pufferfish, those might make for a nasty surprise!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1541,7 +1582,8 @@
       "description": "Adds the shamir 'Lumos' to Metallurgy. It places torches when it is dark.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1572,7 +1614,8 @@
       "description": "Enables Liquid Tanks filled with Experience to repair tools with the mending enchant on them.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1585,8 +1628,8 @@
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.6.3",
-      "hash": "9d0a129420103ff29cda5732ed62aa1703771231",
+      "version": "1.6.4",
+      "hash": "fc36b98087c4042298eddcf973b332010aaf4214",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1623,7 +1666,8 @@
         "gm4_vecto_shamir"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
@@ -1667,7 +1711,8 @@
       "description": "Adds 7 new events to Mysterious Midnights! From nights with merging Slimes to scary Illusioners -- this is a variety pack you shouldn't miss out on!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1699,7 +1744,8 @@
         "gm4_shroomites"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1725,7 +1771,8 @@
       "description": "A mezze of mountaineering means! Glide down slopes and scale cliffs.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
@@ -1760,7 +1807,8 @@
         "gm4_midnight_menaces"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1792,7 +1840,8 @@
       "description": "Adds a neat interface to improve your musical skills!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1805,8 +1854,8 @@
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.7.4",
-      "hash": "7724a31d1e7c37a0674e7eb3eae88a6039c14f08",
+      "version": "1.7.5",
+      "hash": "2fae26647f7dfc43f5242e49615df974d4f9f7dd",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
@@ -1822,8 +1871,11 @@
       ],
       "description": "Harvest mob souls and condense them using forbidden nether magic to obtain mob abilities! Learn how to fly, or simply become turtule-man.",
       "recommends": [],
-      "minecraft": [],
-      "hidden": true,
+      "minecraft": [
+        "1.21",
+        "1.21.1"
+      ],
+      "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
@@ -1855,7 +1907,8 @@
         "gm4_poses_pack"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1868,8 +1921,8 @@
     {
       "id": "gm4_percurro_shamir",
       "name": "Percurro Shamir",
-      "version": "1.4.2",
-      "hash": "538f2454af963a1a32359d2aa3d26269a9252ddc",
+      "version": "1.4.3",
+      "hash": "197270ce0ad4a798f0111514cd9631026ac376e7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir",
       "credits": {
@@ -1886,7 +1939,8 @@
       "description": "Adds the 'Percurro' Shamir to Metallurgy! Weapons with Percurro let you teleport past your enemies in the blink of an eye!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1918,7 +1972,8 @@
       "description": "Set up Scarecrows that shoot homing rockets at Phantoms!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1947,7 +2002,8 @@
       "description": "Ride pigs through fields to quickly harvest and plant crops! Who knows, maybe you will even dig up some useful things in the process.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -1976,7 +2032,8 @@
       "description": "Allows saplings to self-plant when on Podzol. The perfect choice for auto-treefarms!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2013,7 +2070,8 @@
         "gm4_particles_pack"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2050,7 +2108,8 @@
       "description": "Adds the ability to store potions in Liquid Tanks! You can also use a potion by walking beneath a potion-filled Liquid Tank.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2083,7 +2142,8 @@
       "description": "As if getting stabbed isn't enough... support your friends, terrify your enemies, make gold great again using Golden Swords and potions!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2117,7 +2177,8 @@
         "gm4_standard_crafting"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2130,8 +2191,8 @@
     {
       "id": "gm4_relocators",
       "name": "Relocators",
-      "version": "2.4.4",
-      "hash": "677baa0c1fd0feeddab692aafe10de70ac42e6ef",
+      "version": "2.4.5",
+      "hash": "db38059559c09f4a4a0d075c842226eaafafa466",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
       "credits": {
@@ -2159,7 +2220,8 @@
         "gm4_tinkering_compressors"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2188,7 +2250,8 @@
       "description": "Climbing downward has never been easier!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2222,7 +2285,8 @@
         "gm4_sunken_treasure"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2251,7 +2315,8 @@
       "description": "Say goodbye to your boring old rectangular portals!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2282,7 +2347,8 @@
       "description": "Ever wondered why all the Mooshrooms are locked up on islands? This Module makes Mooshrooms spread mycelium and mushrooms wherever they go.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2323,7 +2389,8 @@
         "gm4_relocators"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2354,7 +2421,8 @@
       "description": "Reverse the effects of beacons with corrupting glass! But be careful, a poison Beacon may sound great at first, but is incredibly painful in pratice.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
@@ -2385,7 +2453,8 @@
       "description": "Pick up Spawners and move them wherever you want with Minecarts.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2418,7 +2487,8 @@
       "description": "Gives you a speed effect when you walk on path blocks.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2450,7 +2520,8 @@
       "description": "A crafting recipe pack that adds some nifty new recipes to the game.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2487,7 +2558,8 @@
         "gm4_scuba_gear"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2520,7 +2592,8 @@
       "description": "Transfer your health to another player using flowers.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2553,7 +2626,8 @@
         "gm4_zauber_cauldrons"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2594,7 +2668,8 @@
         "gm4_relocators"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2629,7 +2704,8 @@
         "gm4_cooler_caves"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2642,8 +2718,8 @@
     {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
-      "version": "1.5.5",
-      "hash": "cf9fb401a3da6b5d189348f06bc5118ceb178028",
+      "version": "1.5.6",
+      "hash": "826e472051077a135a7d67cc0ad035a365624493",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
       "credits": {
@@ -2665,7 +2741,8 @@
         "gm4_vertical_rails"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2697,7 +2774,8 @@
       "description": "You'll find your death point faster, but you'll have to fight your corpse for your stuff back!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
@@ -2728,7 +2806,8 @@
       "description": "Adds the 'Vecto' Shamir to Metallury. Summon a Boat or Minecart out of thin air when in need, no more wasting an inventory slot!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2762,7 +2841,8 @@
       "description": "Use ladders as vertical Minecart tracks.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2794,7 +2874,8 @@
       "description": "Adds the shamir 'Vigere' to Metallurgy. It heals you when you block with a shield.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2826,7 +2907,8 @@
       "description": "Die! Dye! Remove die from items in a Liquid Tank filled with Water, at the cost of \u2153 of a bucket.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2855,7 +2937,8 @@
       "description": "Perfect for UHCs, this module forces you to balance protection with speed.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2889,7 +2972,8 @@
       "description": "Stand on top of an Ender Chest to store Experience, stand below to retrieve it!",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -2999,7 +3083,8 @@
         "gm4_vertical_rails"
       ],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -3035,7 +3120,8 @@
       "description": "Use our resource pack for the definitive Gamemode 4 experience! This resource pack does not touch vanilla textures, but adds textures and models to most Gamemode 4 blocks, items and mobs.",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": false,
       "important_note": null,
@@ -3063,7 +3149,8 @@
       "description": "",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": true,
       "important_note": null,
@@ -3094,7 +3181,8 @@
       "description": "",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": true,
       "important_note": null,
@@ -3120,7 +3208,8 @@
       "description": "",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": true,
       "important_note": null,
@@ -3146,7 +3235,8 @@
       "description": "",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": true,
       "important_note": null,
@@ -3172,7 +3262,8 @@
       "description": "",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": true,
       "important_note": null,
@@ -3198,7 +3289,8 @@
       "description": "",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": true,
       "important_note": null,
@@ -3224,7 +3316,8 @@
       "description": "",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": true,
       "important_note": null,
@@ -3250,7 +3343,8 @@
       "description": "",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": true,
       "important_note": null,
@@ -3277,7 +3371,8 @@
       "description": "",
       "recommends": [],
       "minecraft": [
-        "1.21"
+        "1.21",
+        "1.21.1"
       ],
       "hidden": true,
       "important_note": null,
