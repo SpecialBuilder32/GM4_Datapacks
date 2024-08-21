@@ -135,6 +135,7 @@ class SummaryHandler(logging.handlers.BufferingHandler):
 
 def add_module_dir_to_diagnostics(ctx: Context):
     """Sets up a logging record filter that prepends the proper module folder to mecha diagnostics"""
+    print(f"running annotations.add_module_dir_to_diagnostics for {ctx.project_id}")
     local_filter = partial(add_mecha_subproject_dir, subproject_dir=ctx.directory.stem)
     mc_logger = logging.getLogger("mecha")
     mc_logger.addFilter(local_filter)
