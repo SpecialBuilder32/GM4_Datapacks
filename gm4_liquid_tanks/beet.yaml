@@ -1,6 +1,6 @@
 id: gm4_liquid_tanks
 name: Liquid Tanks
-version: 2.6.X
+version: 2.7.X
 
 data_pack:
   load: .
