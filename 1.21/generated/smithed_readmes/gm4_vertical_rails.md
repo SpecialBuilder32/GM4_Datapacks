@@ -1,10 +1,10 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Vertical Rails by Gamemode 4<!--$pmc:delete-->
 
-Turn ladders into vertical railways for your minecarts! This simple datapack is great way to travel from the depths of a mineshaft to the top of a mountian, without the need for dizzying railway corkscrews<!--$pmc:headerSize-->
+Turn ladders into vertical railways for your minecarts! This simple data pack is great way to travel from the depths of a mineshaft to the top of a mountian, without the need for dizzying railway corkscrews<!--$pmc:headerSize-->
 
 ![Note Block Interface Example](https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_vertical_rails/images/vertical_rails.webp)<!--$modrinth:replaceWithVideo--><!--$pmc:delete-->
 
-### Features:
+### Features
 - Minecarts inside ladders automatically travel upwards until the reach the top, where they continue on regular rails.
 - Adds a custom advancement for your first ride up a wall
 
@@ -14,8 +14,8 @@ Turn ladders into vertical railways for your minecarts! This simple datapack is 
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Vertical_Rails)
 
 ### Credits
-- Creators: [Sparks](https://twitter.com/SelcouthSparks), [SiberianHat](https://twitter.com/SiberianHat)
-- Updated by: [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Kruthers](https://twitter.com/Pandakruthers)
+- Creators: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social), [SiberianHat](https://twitter.com/SiberianHat)
+- Updated by: [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Kruthers](https://twitter.com/Pandakruthers)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

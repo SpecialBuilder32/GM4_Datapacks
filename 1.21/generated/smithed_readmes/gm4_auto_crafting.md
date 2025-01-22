@@ -1,6 +1,6 @@
-# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Auto Crafting by Gamemode 4 <!--$pmc:delete-->
+# <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Auto Crafting by Gamemode 4<!--$pmc:delete-->
 
-Excited for the new 1.21 crafter block? Want to start making the cake factory of your dreams right now? Try out Gamemode 4's take on auto-crafting, available right now for 1.19 and 1.20!<!--$pmc:headerSize-->
+Try out Gamemode 4's take on auto-crafting!<!--$pmc:headerSize-->
 
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_auto_crafting/images/auto_crafter.webp" alt="Auto Crafter at work" width="350"/>  <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
@@ -28,9 +28,9 @@ Build the Multiblock Structure
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting)
 
 ### Credits
-- Creator: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creator: [BPR](https://bsky.app/profile/bpr02.com)
 - Icon Design: Hozz
-- Textures: [Kyrius](http://discordapp.com/users/287287322360414218)
+- Textures: [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

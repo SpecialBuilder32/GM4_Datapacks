@@ -1,11 +1,11 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Ziprails by Gamemode 4<!--$pmc:delete-->
 
-Everyone loves building minecart rail systems, but giant mono-rails across your world can get to be an eyesore. With this simple datapack, enable your minecarts to hang from "ziprails" made of tripwire, much less intrusive 
+Everyone loves building minecart rail systems, but giant mono-rails across your world can get to be an eyesore. With this simple data pack, enable your minecarts to hang from "ziprails" made of tripwire, much less intrusive 
 than regular rail lines. <!--$pmc:headerSize-->
 
 ![Ziprails Example](https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_ziprails/images/ziprails_example.webp)  <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
-### Features:
+### Features
 - All minecart types can grab onto a "ziprail" by riding under the tripwire hook at one end.
 - Minecarts will travel down a ziprail until it reaches the other end, much like a gondola or cable-car
 - Adds a custom advancement for your first ride in the sky
@@ -16,7 +16,7 @@ than regular rail lines. <!--$pmc:headerSize-->
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Ziprails)
 
 ### Credits
-- Creators: [Sparks](https://twitter.com/SelcouthSparks), [SpecialBuilder32](https://twitter.com/SpecialBuilder), [Bloo](https://twitter.com/Bloo_dev)
+- Creators: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social), [SpecialBuilder32](https://bsky.app/profile/specialbuilder32.bsky.social), [Bloo](https://bsky.app/profile/bloo.boo)
 - Icon Design: [DuckJr](https://twitter.com/DuckJr94)
 
 ---

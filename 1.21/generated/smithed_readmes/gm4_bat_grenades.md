@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Bat Grenades by Gamemode 4<!--$pmc:delete-->
 
-Tired of the uselessness of bats? Need something to spice up your caving adventures? This modular datapack kills those two birds, er bats, with one stone, and turns bats into tiny furry flying balls of boom! <!--$pmc:headerSize-->
+Tired of the uselessness of bats? Need something to spice up your caving adventures? This modular data pack kills those two birds, er bats, with one stone, and turns bats into tiny furry flying balls of boom! <!--$pmc:headerSize-->
 
 ### Features
 - Bats that fly within 7 blocks of a player squeak a warning, and explode if they get within 3 blocks of the player.
@@ -14,8 +14,8 @@ Tired of the uselessness of bats? Need something to spice up your caving adventu
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Bat_Grenades)
 
 ### Credits
-- Creator: [Sparks](https://twitter.com/SelcouthSparks)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Creator: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

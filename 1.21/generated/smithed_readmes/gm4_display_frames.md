@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Display Frames by Gamemode 4<!--$pmc:delete-->
 
-Have you ever wanted to add invisible item frames to your survival world without feeling like you're cheating? This datapack will let you splash your item frames with invisibility potions to make them permanently invisible when displaying an item! <!--$pmc:headerSize-->
+Have you ever wanted to add invisible item frames to your survival world without feeling like you're cheating? This data pack will let you splash your item frames with invisibility potions to make them permanently invisible when displaying an item! <!--$pmc:headerSize-->
 
 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/gm4_display_frames/images/display_frames_example.png" alt="Display frames in use" height="350"/>  <!--$modrinth:replaceWithVideo--> <!--$pmc:delete-->
 
@@ -13,8 +13,8 @@ Have you ever wanted to add invisible item frames to your survival world without
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Display_Frames)
 
 ### Credits
-- Creators: [BluePsychoRanger](https://twitter.com/BluPsychoRanger), TheEpyonProject
-- Icon Design: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
+- Creators: [BPR](https://bsky.app/profile/bpr02.com), TheEpyonProject
+- Icon Design: [BPR](https://bsky.app/profile/bpr02.com)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>

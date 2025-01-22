@@ -1,7 +1,7 @@
 # <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="GM4 Logo" width="32" /> Double Doors by Gamemode 4<!--$pmc:delete-->
 
 Tired of clicking twice to open a double door?
-Annoyed by the fact that doors are only two blacks tall?
+Annoyed by the fact that doors are only two blocks tall?
 Pressure Plates just don't cut it for closing doors behind you?
 This data pack **automatically opens adjacent doors**, making double doors fully functional! Additionally, bottom **trapdoors** of matching wood type placed above a door **are opened alongside** the door when it is opened by a player. And maybe best of all, **doors close automatically** behind you! <!--$pmc:headerSize-->
 
@@ -19,7 +19,7 @@ This data pack **automatically opens adjacent doors**, making double doors fully
 [<img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_wiki_logo.png" alt="Gamemode 4 Wiki Logo" width="40" align="center"/> **Read the Wiki**](https://wiki.gm4.co/wiki/Double_Doors)
 
 ### Credits
-- Creator: [Bloo](https://twitter.com/Bloo_dev)
+- Creator: [Bloo](https://bsky.app/profile/bloo.boo)
 - Icon Design: venomousbirds
 
 ---

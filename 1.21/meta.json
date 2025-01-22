@@ -1,11 +1,11 @@
 {
-  "last_commit": "d441a741868ca6ec001a86d625e2d82c0fe37ee6",
+  "last_commit": "889f48b1edb5235382748e9db456622f80bea4fe",
   "modules": [
     {
       "id": "gm4_animi_shamir",
       "name": "Animi Shamir",
-      "version": "1.4.4",
-      "hash": "11428ae57dde1f55dbb14ee4baa3b4f247df05be",
+      "version": "1.4.5",
+      "hash": "f7c3c4fdc11b0f4b79ce3ba9ad9d916ca0545b7c",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Animi_Shamir",
       "credits": {
@@ -23,31 +23,34 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "bPnAELDm",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_apple_trees",
       "name": "Apple Trees",
-      "version": "2.4.1",
-      "hash": "d3e96677bbf957ead0d082666e5ab1e6eb50a2cf",
+      "version": "2.4.2",
+      "hash": "4a6cbfa12a7c9a3d169c4108f3608d8fe7bcae91",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Apple_Trees",
       "credits": {
         "Creators": [
           "Bloo",
-          "BluePsychoRanger",
+          "BPR",
           "SpecialBuilder32"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -59,7 +62,10 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": "Modifies the oak leaves loot table to no longer contain apples. May cause incompatibilities with Datapacks that also modify this loot table.",
@@ -72,8 +78,8 @@
     {
       "id": "gm4_audere_shamir",
       "name": "Audere Shamir",
-      "version": "1.4.0",
-      "hash": "ddb337152ad1d98ae4d0b5473b7c43bccd4a680e",
+      "version": "1.4.1",
+      "hash": "d5e27feb30892f63c1ffbab48044b5c6dd6864b4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Audere_Shamir",
       "credits": {
@@ -81,7 +87,7 @@
           "Kattacka"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -91,26 +97,29 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "2rSIqoh7",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_auto_crafting",
       "name": "Auto Crafting",
-      "version": "1.4.2",
-      "hash": "607a4ce854f0c54bcb821faed46b64ae5f1d5646",
+      "version": "1.4.3",
+      "hash": "41c83c70a114b3f6c26d7750f114e87d434311df",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Custom_Crafters/Auto_Crafting",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -139,7 +148,10 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -152,8 +164,8 @@
     {
       "id": "gm4_balloon_animals",
       "name": "Balloon Animals",
-      "version": "1.2.1",
-      "hash": "b8da748d2f5a050de030d2493ac7d9deca25dcc4",
+      "version": "1.2.2",
+      "hash": "050c1d50bf6f6348e6b292f960949a2ee3e5d97b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Balloon_Animals",
       "credits": {
@@ -166,21 +178,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2024-04-14",
-      "modrinth_id": null,
+      "modrinth_id": "zKRZZHQ3",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_bat_grenades",
       "name": "Bat Grenades",
-      "version": "1.5.0",
-      "hash": "4afa93b73df43f314ea67b53546c6683eeb4923d",
+      "version": "1.5.1",
+      "hash": "26f5ee7d4368f409747bc81be6fce4380bc0d337",
       "video_link": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Bat_Grenades",
       "credits": {
@@ -199,7 +214,10 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
@@ -212,8 +230,8 @@
     {
       "id": "gm4_beehive_inspector",
       "name": "Beehive Inspector",
-      "version": "1.4.0",
-      "hash": "6ced660fa812885d891aeec61659d7732c3ccd5e",
+      "version": "1.4.1",
+      "hash": "d535380988926eeea4af110b55c9160ace548ab9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Beehive_Inspector",
       "credits": {
@@ -221,7 +239,7 @@
           "Misode"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -235,15 +253,15 @@
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "m5Qr50rW",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_better_armour_stands",
       "name": "Better Armour Stands",
-      "version": "2.4.0",
-      "hash": "2b9c728459ffe9a2dbf286ac1ec9a109e0e82749",
+      "version": "2.4.1",
+      "hash": "1dac0bf89482dc48dc3b1753a9435d37203abc09",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw",
       "wiki_link": "https://wiki.gm4.co/wiki/Better_Armour_Stands",
       "credits": {
@@ -267,7 +285,10 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -280,8 +301,8 @@
     {
       "id": "gm4_better_fire",
       "name": "Better Fire",
-      "version": "1.5.0",
-      "hash": "6593a410eb64df7d7fa061ef5781278887770796",
+      "version": "1.5.1",
+      "hash": "9883ff1169eede4450fbf2413c4b87b898f9f36f",
       "video_link": "https://www.youtube.com/watch?v=J5024LhHuWk",
       "wiki_link": "https://wiki.gm4.co/wiki/Better_Fire",
       "credits": {
@@ -304,21 +325,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "tQgWS7r6",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_block_compressors",
       "name": "Block Compressors",
-      "version": "1.5.2",
-      "hash": "ee8e7a4c79a4d78e58507cead9802eb04c4b5ab9",
+      "version": "1.5.3",
+      "hash": "b51308a637ff94f2dfd9349ba92fa76d6a3c639b",
       "video_link": "https://www.youtube.com/watch?v=sdrTJYjL8C0",
       "wiki_link": "https://wiki.gm4.co/wiki/Block_Compressors",
       "credits": {
@@ -329,7 +353,7 @@
           "SunderB",
           "Misode",
           "JP12",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -358,21 +382,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "TSz8iiMD",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_book_binders",
       "name": "Book Binders",
-      "version": "1.4.0",
-      "hash": "42637c7d97df657122aa7df62fffaf20b6253743",
+      "version": "1.4.1",
+      "hash": "0abcd63f8302fe2dc127e75ef9efa1da0630aa84",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Book_Binders",
       "credits": {
@@ -391,21 +418,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "oIqNf2N4",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_bookshelf_inspector",
       "name": "Bookshelf Inspector",
-      "version": "1.3.0",
-      "hash": "b0a8561700479bc5682124fa101aed247a092caa",
+      "version": "1.3.1",
+      "hash": "9e2d61d4879e802438629f4d080686d2737c2da5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Bookshelf_Inspector",
       "credits": {
@@ -418,7 +448,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -431,8 +464,8 @@
     {
       "id": "gm4_boots_of_ostara",
       "name": "Boots of Ostara",
-      "version": "1.7.2",
-      "hash": "b1d12d4f0f039601c932791ee8a326e2a2154ba1",
+      "version": "1.7.3",
+      "hash": "3a1911e57c0d4a42dfeba729beac7fe482c76508",
       "video_link": "https://www.youtube.com/watch?v=H4UGM6_wGCE",
       "wiki_link": "https://wiki.gm4.co/wiki/Boots_of_Ostara",
       "credits": {
@@ -440,7 +473,8 @@
           "The8BitMonkey"
         ],
         "Updated by": [
-          "Misode"
+          "Misode",
+          "catter1"
         ],
         "Icon Design": [
           "Hozz"
@@ -456,21 +490,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "YCcs2E01",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_calling_bell",
       "name": "Calling Bell",
-      "version": "1.4.1",
-      "hash": "4f2a7bd9a68133ccad004a1e48b5deb849b356b3",
+      "version": "1.4.2",
+      "hash": "17b93c9551be25fcb4b2eb1b3df410b0a0214fdc",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Calling_Bell",
       "credits": {
@@ -489,7 +526,10 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -502,8 +542,8 @@
     {
       "id": "gm4_cement_mixers",
       "name": "Cement Mixers",
-      "version": "1.4.0",
-      "hash": "6196ddbd8a56479f281878caf98cb5ebf67749dc",
+      "version": "1.4.1",
+      "hash": "70e101465d9eddc74907a651aa79828a8c0edb49",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Cement_Mixers",
       "credits": {
@@ -521,21 +561,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "blBLRC4i",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_chairs",
       "name": "Chairs",
-      "version": "1.5.0",
-      "hash": "b27ca7c2375d65001373f11cf7bc813f4e078327",
+      "version": "1.5.1",
+      "hash": "dccc6423c4822952cc3529d080041126e30d0388",
       "video_link": "https://www.youtube.com/watch?v=7KbBw1hEKdY",
       "wiki_link": "https://wiki.gm4.co/wiki/Chairs",
       "credits": {
@@ -555,7 +598,10 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -568,8 +614,8 @@
     {
       "id": "gm4_combat_expanded",
       "name": "Combat Expanded",
-      "version": "2.2.2",
-      "hash": "f2e1db44640a6d5814b84a7ed073813c7c592861",
+      "version": "2.2.3",
+      "hash": "c08c47aaa91b8a1f8af51d119d440cbf3fb26e0e",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Combat_Expanded",
       "credits": {
@@ -597,8 +643,8 @@
     {
       "id": "gm4_cooler_caves",
       "name": "Cooler Caves",
-      "version": "2.4.0",
-      "hash": "f21814e9f3ca92d38d8122a070b9930a39cefc09",
+      "version": "2.4.1",
+      "hash": "9416e970d8494b2a790bf9e2c30c8eb8fb823f22",
       "video_link": "https://www.youtube.com/watch?v=cAsXiwLWHFo",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Cooler_Caves",
       "credits": {
@@ -613,28 +659,31 @@
         ]
       },
       "requires": [],
-      "description": "A custom terrain expansion pack that makes biome specific caves and mineshafts",
+      "description": "A custom terrain expansion pack that makes biome specific caves",
       "recommends": [
         "gm4_dangerous_dungeons",
         "gm4_tower_structures"
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "juqV05HI",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_cozy_campfires",
       "name": "Cozy Campfires",
-      "version": "1.4.0",
-      "hash": "83e362c0c56c93eaaa7ac261b7db59ad03274f83",
+      "version": "1.4.1",
+      "hash": "353b8b3b504f3d1cdc6b0992f89d7ed7552543db",
       "video_link": "https://www.youtube.com/watch?v=nvAbzAtDFhw",
       "wiki_link": "https://wiki.gm4.co/wiki/Cozy_Campfires",
       "credits": {
@@ -642,7 +691,7 @@
           "Bloo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -650,21 +699,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "BKQjQlSY",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_crossbow_cartridges",
       "name": "Crossbow Cartridges",
-      "version": "1.7.0",
-      "hash": "73534f34bfae95740431556333c5cb77154e6f64",
+      "version": "1.7.1",
+      "hash": "8cf04e7353e6d5ea32a4fc756229b9cce861d489",
       "video_link": "https://www.youtube.com/watch?v=XJiGvX7l-pI",
       "wiki_link": "https://wiki.gm4.co/wiki/Crossbow_Cartridges",
       "credits": {
@@ -681,7 +733,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -694,8 +749,8 @@
     {
       "id": "gm4_dangerous_dungeons",
       "name": "Dangerous Dungeons",
-      "version": "2.4.0",
-      "hash": "3b5369f0e44d910ae7e1c4f8648312388d277ed2",
+      "version": "2.4.1",
+      "hash": "6689ced6fcaa4f69d29721d5bf1eed2e38de78f8",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Dangerous_Dungeons",
       "credits": {
@@ -717,21 +772,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Go9VJGOZ",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_desire_lines",
       "name": "Desire Lines",
-      "version": "1.5.0",
-      "hash": "85c6c6b3f3db65a9b3f85ead9585fd29c680275c",
+      "version": "1.5.1",
+      "hash": "314221a99d36fe5d8cd32e10f65ac4f0a0ae592e",
       "video_link": "https://www.youtube.com/watch?v=wmGaatfekfs",
       "wiki_link": "https://wiki.gm4.co/wiki/Desire_Lines",
       "credits": {
@@ -754,7 +812,10 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -767,8 +828,8 @@
     {
       "id": "gm4_disassemblers",
       "name": "Disassemblers",
-      "version": "2.4.2",
-      "hash": "e77bcb257d3c7ae4fe406d4d3587547239ef7077",
+      "version": "2.4.3",
+      "hash": "1b3471ca3895830dcff42333691e3b379df72536",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Disassemblers",
       "credits": {
@@ -777,7 +838,7 @@
         ],
         "Updated by": [
           "Federick90",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -806,30 +867,33 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Cg5FQaTk",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_display_frames",
       "name": "Display Frames",
-      "version": "1.5.1",
-      "hash": "11e4742d1358110decb344741762c662ecf3eb57",
+      "version": "1.5.2",
+      "hash": "848cad19ec58d47cc800b2133ea250c5305a17b6",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Display_Frames",
       "credits": {
         "Creators": [
-          "BluePsychoRanger",
+          "BPR",
           "TheEpyonProject"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -841,21 +905,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "u59ticCz",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_double_doors",
       "name": "Double Doors",
-      "version": "1.2.0",
-      "hash": "61f8d137f761950ec5b69d19ba7034484a286c25",
+      "version": "1.2.1",
+      "hash": "4850e13d08637a33577c9882eb300c454f35ba6c",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Double_Doors",
       "credits": {
@@ -867,11 +934,14 @@
         ]
       },
       "requires": [],
-      "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blacks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
+      "description": "Tired of clicking twice to open a double door? Annoyed by the fact that doors are only two blocks tall? This data pack automatically opens adjacent doors, making double doors fully functional! Additionally, bottom trapdoors of matching wood type placed above a door are opened alongside the door when it is opened by a player.",
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -884,8 +954,8 @@
     {
       "id": "gm4_dripleaf_filters",
       "name": "Dripleaf Filters",
-      "version": "1.4.0",
-      "hash": "954d478e6173635f56fe3cca6942946aa4f715cc",
+      "version": "1.4.1",
+      "hash": "789652ca2c55642abf9df27a9ca5c20b73d8695f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Filters",
       "credits": {
@@ -903,21 +973,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "WNvo6RJr",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_dripleaf_launchers",
       "name": "Dripleaf Launchers",
-      "version": "1.3.0",
-      "hash": "c9caf92c7e6a1d81dd96810e2c39a358227d28cb",
+      "version": "1.3.1",
+      "hash": "a015fe1ec650c83c1929a0c6b549d3a57dfd8701",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
       "credits": {
@@ -930,7 +1003,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -943,8 +1019,8 @@
     {
       "id": "gm4_enchantment_extractors",
       "name": "Enchantment Extractors",
-      "version": "2.4.2",
-      "hash": "61f65e3aac6a3a579aa88d1994b5a204263ba6cf",
+      "version": "2.4.3",
+      "hash": "4e737cbe7a8db1da47ee7fc727f4bb395b8017e0",
       "video_link": "https://www.youtube.com/watch?v=DT4PPHC23iM",
       "wiki_link": "https://wiki.gm4.co/wiki/Enchantment_Extractors",
       "credits": {
@@ -954,7 +1030,7 @@
         "Updated by": [
           "SpecialBuilder32",
           "Misode",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -983,26 +1059,29 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "eoRo8GBL",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_end_fishing",
       "name": "End Fishing",
-      "version": "1.5.0",
-      "hash": "f45f38c2cbcbd0257b00944fb649642fbd80b728",
+      "version": "1.5.1",
+      "hash": "445777664b1b36ea515081e852b200e5071a963b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/End_Fishing",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Sparks"
@@ -1015,21 +1094,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "BbEwao9o",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_ender_hoppers",
       "name": "Ender Hoppers",
-      "version": "1.7.2",
-      "hash": "b71ff18236f8d7889274380156d1d4e258573ae0",
+      "version": "1.7.3",
+      "hash": "a804e302737db257a4d4a3ad4546e22b9705b800",
       "video_link": "https://www.youtube.com/watch?v=wrwg4BDgEGU",
       "wiki_link": "https://wiki.gm4.co/wiki/Ender_Hoppers",
       "credits": {
@@ -1038,7 +1120,7 @@
         ],
         "Updated by": [
           "Misode",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -1067,21 +1149,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "dB4zrtK8",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_enderman_support_class",
       "name": "Enderman Support Class",
-      "version": "1.6.0",
-      "hash": "79df04c6dcdb8e2286085bc4b94cff23ed25b73e",
+      "version": "1.6.1",
+      "hash": "389717d36abd5b23db631641ea1e8cc2c227ae8a",
       "video_link": "https://www.youtube.com/watch?v=2hWZ4OKUaqI",
       "wiki_link": "https://wiki.gm4.co/wiki/Enderman_Support_Class",
       "credits": {
@@ -1099,30 +1184,33 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Dhlwu1G6",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_everstone",
       "name": "Everstone",
-      "version": "1.4.0",
-      "hash": "9ebceec83ce6785fb4d798506abc635d04ac367b",
+      "version": "1.4.1",
+      "hash": "8513b255f8095246c9d01dba280876e1b6462bf5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Everstone",
       "credits": {
         "Creators": [
           "Denniss",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -1132,21 +1220,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "4XVj9LBh",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_forming_press",
       "name": "Forming Press",
-      "version": "1.5.2",
-      "hash": "9a2cbab0c1563297b82387fa99c444e05f8c6e58",
+      "version": "1.5.3",
+      "hash": "74dd793ed18bed7b079208433f5206e815169056",
       "video_link": "https://www.youtube.com/watch?v=ibtS4zAvglQ",
       "wiki_link": "https://wiki.gm4.co/wiki/Forming_Press",
       "credits": {
@@ -1155,14 +1246,14 @@
         ],
         "Updated by": [
           "Misode",
-          "BluePsychoRanger",
+          "BPR",
           "TheEpyonProject"
         ],
         "Textures by": [
           "Kyrius"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -1185,30 +1276,33 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "LGXxY3vu",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_fulcio_shamir",
       "name": "Fulcio Shamir",
-      "version": "1.4.0",
-      "hash": "c12f468c5b9b4c581dc50a676218e13303a5316e",
+      "version": "1.4.1",
+      "hash": "85b49b8d3f8ac208d094a34e227b6361947840ec",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Fulcio_Shamir",
       "credits": {
         "Creators": [
-          "BluePsychoRanger",
+          "BPR",
           "Bloo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1218,26 +1312,29 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "N09PsTgz",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_guidebook",
       "name": "Guidebook",
-      "version": "2.2.1",
-      "hash": "0a197946547a75bdb7c628b20d005b2e2901dae1",
+      "version": "3.0.0",
+      "hash": "3a6424c7962e58245b9e0ff43288cf08680f68f2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
       "credits": {
         "Creators": [
-          "BluePsychoRanger",
+          "BPR",
           "JP12"
         ]
       },
@@ -1258,8 +1355,8 @@
     {
       "id": "gm4_heart_canisters",
       "name": "Heart Canisters",
-      "version": "1.7.2",
-      "hash": "e3c78fb8687a525f3e4a14929e60cbd33cc02f43",
+      "version": "1.7.3",
+      "hash": "c2ae581da93c3825c18ed2fccb8069a7cda140ef",
       "video_link": "https://www.youtube.com/watch?v=zjmL6rjoq0g",
       "wiki_link": "https://wiki.gm4.co/wiki/Heart_Canisters",
       "credits": {
@@ -1299,26 +1396,29 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "EjJQ5tiv",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_holographic_tags",
       "name": "Holographic Tags",
-      "version": "1.4.3",
-      "hash": "00adc43554b9f535addea6bcecd9ee203d0edf7a",
+      "version": "1.4.4",
+      "hash": "4126fde709b19157c7dfb6f294bca9fb93b1cbc5",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Holographic_Tags",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Inspired by": [
           "SethBling"
@@ -1332,7 +1432,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -1345,8 +1448,8 @@
     {
       "id": "gm4_iacio_shamir",
       "name": "Iacio Shamir",
-      "version": "1.4.0",
-      "hash": "78b8ac1f56c4e212c72b25457606ad95c9467547",
+      "version": "1.4.1",
+      "hash": "100a6d5bcfd01b6c816dbae9713e66117d5b8e36",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Iacio_Shamir",
       "credits": {
@@ -1354,7 +1457,7 @@
           "Denniss"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1364,21 +1467,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "DTk79ZcR",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_ink_spitting_squid",
       "name": "Ink Spitting Squid",
-      "version": "1.5.0",
-      "hash": "0256a8ac0ea2daa4e86438608402497e06d40b15",
+      "version": "1.5.1",
+      "hash": "4a295cf7df6536cb16b4db3ea7b902d37e72c156",
       "video_link": "https://www.youtube.com/watch?v=68LMYEhueZ0",
       "wiki_link": "https://wiki.gm4.co/wiki/Ink_Spitting_Squid",
       "credits": {
@@ -1386,7 +1492,7 @@
           "Energyxxer"
         ],
         "Updated by": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Sparks"
@@ -1397,31 +1503,34 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "ljOfYHJv",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_lightning_in_a_bottle",
       "name": "Lightning in a Bottle",
-      "version": "1.7.1",
-      "hash": "b4c379ac152341366b510a27bcc7463299012a10",
+      "version": "1.7.2",
+      "hash": "658fb6285f34ed4b817b5b2e9180f27f1c3c3c2e",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lightning_in_a_Bottle",
       "credits": {
         "Creator": [
           "Bloo",
-          "BluePsychoRanger",
+          "BPR",
           "TheEpyonProject"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -1434,21 +1543,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": "Brewing Stands may need to be broken and replaced to be able to craft Lightning in a Bottle when the module is first installed.",
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "GVqJxowR",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_liquid_minecarts",
       "name": "Liquid Minecarts",
-      "version": "1.6.1",
-      "hash": "0a66cdf36dce94d1bdf119d00afe0aba2f74269f",
+      "version": "1.6.2",
+      "hash": "5dcb3aa27b93a37375187f37bb86b79c1be7dab4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Liquid_Minecarts",
       "credits": {
@@ -1457,7 +1569,7 @@
         ],
         "Updated by": [
           "SpecialBuilder32",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -1472,21 +1584,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Ymtg3OOc",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_liquid_tanks",
       "name": "Liquid Tanks",
-      "version": "2.6.2",
-      "hash": "3d735ffc4974a3e9a9ffec137219d607e277699f",
+      "version": "2.6.3",
+      "hash": "72982ce180c1249dbe5cd7c91eecb2c011984933",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks",
       "credits": {
@@ -1495,7 +1610,7 @@
         ],
         "Updated by": [
           "SpecialBuilder32",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
           "Vilder50",
@@ -1517,29 +1632,32 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "h4BcuD3C",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_live_catch",
       "name": "Live Catch",
-      "version": "1.4.0",
-      "hash": "2458fbde30d3e1688a3c9ef5ed9737b843158c09",
+      "version": "1.4.1",
+      "hash": "42f4414608a1f22c65aafba47d8f0ac9073df0d3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Live_Catch",
       "credits": {
         "Creator": [
-          "MichaelMiner137"
+          "MichaelModulo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -1547,21 +1665,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "uSXn7pVW",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_lumos_shamir",
       "name": "Lumos Shamir",
-      "version": "1.4.0",
-      "hash": "8e074b912a9d4a2073f0301b83f2964122c2a10e",
+      "version": "1.4.1",
+      "hash": "82f1fc670635ef066aedac233ff8de7b775713c7",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Lumos_Shamir",
       "credits": {
@@ -1573,7 +1694,7 @@
           "Misode"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1583,21 +1704,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "vYbLApXc",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_mending_tanks",
       "name": "Mending Tanks",
-      "version": "1.5.0",
-      "hash": "f5a625d2d76e9df197024c10c56007fab545cf74",
+      "version": "1.5.1",
+      "hash": "716d24f517d0becba6eca9d1af86c5a7433784b1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Mending_Tanks",
       "credits": {
@@ -1615,21 +1739,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "DPYixL7Y",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_metallurgy",
       "name": "Metallurgy",
-      "version": "1.6.4",
-      "hash": "fc36b98087c4042298eddcf973b332010aaf4214",
+      "version": "1.6.5",
+      "hash": "a1a68dc974a67819d57c85c76dd93c11cff2b767",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy",
       "credits": {
@@ -1637,13 +1764,13 @@
           "Sparks",
           "SpecialBuilder32",
           "Bloo",
-          "BluePsychoRanger",
+          "BPR",
           "SirSheepe"
         ],
         "Updated by": [
           "Denniss",
           "Misode",
-          "MichaelMiner137",
+          "MichaelModulo",
           "TheEpyonProject"
         ],
         "Textures by": [
@@ -1667,7 +1794,10 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": "Modifies the stone block loot table. May cause incompatibilities with Datapacks that also modify this loot table.",
@@ -1686,23 +1816,23 @@
         "shamir"
       ],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "raWyrHxi",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_midnight_menaces",
       "name": "Midnight Menaces",
-      "version": "1.5.0",
-      "hash": "96f1de4df01a35c71bf8ee8c7111fbc4b7923380",
+      "version": "1.5.1",
+      "hash": "2d7b8e5a3971be666086f0b07bf64342fa74f35e",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights/Midnight_Menaces",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1712,21 +1842,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "9aTlLrlw",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_mob_curing",
       "name": "Mob Curing",
-      "version": "1.7.1",
-      "hash": "e5da9a696d2efaece1b13d27b12e3b49c5fc5f08",
+      "version": "1.7.2",
+      "hash": "6a96494f4c0026cc07dafe85adef4cdb4efbfa0a",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mob_Curing",
       "credits": {
@@ -1745,21 +1878,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "F06LrkeC",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_mountaineering",
       "name": "Mountaineering",
-      "version": "1.3.2",
-      "hash": "039356855d77d5f7ab7cddeed276658ee331ca4b",
+      "version": "1.3.3",
+      "hash": "abe4ef92e88f494e9384ae9efb06e697f39bbb5b",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mountaineering",
       "credits": {
@@ -1772,7 +1908,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": "Experimental Module! Features may be unbalanced and added or removed without an easy upgrade path.",
@@ -1785,8 +1924,8 @@
     {
       "id": "gm4_mysterious_midnights",
       "name": "Mysterious Midnights",
-      "version": "1.6.1",
-      "hash": "8cdcd26ae9380b42ae29249bb9032e0ae5f5cfe8",
+      "version": "1.6.2",
+      "hash": "e3bee60e4b97553063855c756cf63264fa07cd94",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Mysterious_Midnights",
       "credits": {
@@ -1795,34 +1934,37 @@
         ],
         "Updated by": [
           "Bloo",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "DuckJr"
         ]
       },
       "requires": [],
-      "description": "Full moons gain a element of surprise with Myserious Midnights! This module adds random events during full moons. You might encounter falling stars, or Skeletons wielding poisonous arrows! So you better listen for that howl...",
+      "description": "Full moons gain an element of surprise with Mysterious Midnights! You might encounter falling stars, or Skeletons wielding poisonous arrows during full moons! So you better listen for that howl...",
       "recommends": [
         "gm4_midnight_menaces"
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "9skST20d",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_note_block_interface",
       "name": "Note Block Interface",
-      "version": "1.4.0",
-      "hash": "c3d62b08a2ab7b9a8e04ce10aad5faabf9db5956",
+      "version": "1.4.1",
+      "hash": "eca6f956a02e250912441e2f456bdef1bfb129ea",
       "video_link": "https://www.youtube.com/watch?v=Kqrdy-8-sb8",
       "wiki_link": "https://wiki.gm4.co/wiki/Note_Block_Interface",
       "credits": {
@@ -1841,29 +1983,32 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "ikXgoCNB",
       "smithed_link": "gm4_note_block_interface",
       "pmc_link": null
     },
     {
       "id": "gm4_orb_of_ankou",
       "name": "Orb of Ankou",
-      "version": "1.7.5",
-      "hash": "2fae26647f7dfc43f5242e49615df974d4f9f7dd",
+      "version": "1.7.6",
+      "hash": "6c53c05c596e97b1ba3689c95beb35d840304ae1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orb_of_Ankou",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1873,21 +2018,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "rRP5afZM",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_particles_pack",
       "name": "Particles Pack",
-      "version": "1.6.0",
-      "hash": "e229b317f7634b0e63b4e5291447de09814a82c5",
+      "version": "1.6.1",
+      "hash": "29281ea96c29e7f850b26603f4aa2f5accbd3d06",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=238s",
       "wiki_link": "https://wiki.gm4.co/wiki/Particles_Pack",
       "credits": {
@@ -1901,28 +2049,33 @@
           "DuckJr"
         ]
       },
-      "requires": [],
+      "requires": [
+        "gm4_better_armour_stands"
+      ],
       "description": "Fireflies to flames, add some pezazz to your projects! Allows you to turn Armour Stands into particle sources that you control!",
       "recommends": [
         "gm4_poses_pack"
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "hqLgWYiS",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_percurro_shamir",
       "name": "Percurro Shamir",
-      "version": "1.4.3",
-      "hash": "197270ce0ad4a798f0111514cd9631026ac376e7",
+      "version": "1.4.4",
+      "hash": "45d9e2c3fa475c1b9e7cbf389fd4897eb2b9abb2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Percurro_Shamir",
       "credits": {
@@ -1930,7 +2083,7 @@
           "Bloo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -1940,21 +2093,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "MrSTch8u",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_phantom_scarecrows",
       "name": "Phantom Scarecrows",
-      "version": "1.4.0",
-      "hash": "e80e66a86080897bf289cbe0a4701cd3c110ccbf",
+      "version": "1.4.1",
+      "hash": "a475a3d1f6dbe445a7e9deb0833adc34f91c77bc",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Phantom_Scarecrows",
       "credits": {
@@ -1973,21 +2129,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "OQYrrgEP",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_pig_tractors",
       "name": "Pig Tractors",
-      "version": "1.7.0",
-      "hash": "3be6a7633514d622a33a22ced310e47102dfc2fb",
+      "version": "1.7.1",
+      "hash": "baa37c90f45f3cc5930cb2c0ce143ecf80f41068",
       "video_link": "https://www.youtube.com/watch?v=7i0WFHUfBXs",
       "wiki_link": "https://wiki.gm4.co/wiki/Pig_Tractors",
       "credits": {
@@ -2003,29 +2162,35 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "8lN3MtcQ",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_podzol_rooting_soil",
       "name": "Podzol Rooting Soil",
-      "version": "1.5.0",
-      "hash": "fc36813fe46f7c93ddbc346f936b60ef49f2033f",
+      "version": "1.5.1",
+      "hash": "29cac2910cb2ad93d5df0e6c3946fed0e8b97836",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Podzol_Rooting_Soil",
       "credits": {
         "Creator": [
           "Bloo"
         ],
+        "Updated by": [
+          "Misode"
+        ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -2033,21 +2198,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "keFbZ5iO",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_poses_pack",
       "name": "Poses Pack",
-      "version": "1.6.0",
-      "hash": "59447e8b8ec1b6a07f65223e0ee8583b697f3870",
+      "version": "1.6.1",
+      "hash": "f6528249947c518c8676541d3e7e9342dbdce82a",
       "video_link": "https://www.youtube.com/watch?v=ZBqmGpAXqmw&t=217s",
       "wiki_link": "https://wiki.gm4.co/wiki/Poses_Pack",
       "credits": {
@@ -2071,21 +2239,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "vE5iK9HJ",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_potion_liquids",
       "name": "Potion Liquids",
-      "version": "1.7.1",
-      "hash": "fae044806a11aac04802b48028500e43b2a72825",
+      "version": "1.7.2",
+      "hash": "58b988eb7ca416e2c0da6fde7a06a677a73e4b3d",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Potion_Liquids",
       "credits": {
@@ -2109,21 +2280,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Z08l0oKH",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_potion_swords",
       "name": "Potion Swords",
-      "version": "1.6.0",
-      "hash": "e3e39ac6b761dd345f2d1faf7f750adee24f3a76",
+      "version": "1.6.1",
+      "hash": "0c72a746b6e74f8e293c2a78c7b5a0f79592ad5f",
       "video_link": "https://www.youtube.com/watch?v=9xI3CQ1z5cg",
       "wiki_link": "https://wiki.gm4.co/wiki/Potion_Swords",
       "credits": {
@@ -2143,21 +2317,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "ZmYNpwdj",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_record_crafting",
       "name": "Record Crafting",
-      "version": "1.4.2",
-      "hash": "d726b6426aabd71c66398c5076821b2cb572a484",
+      "version": "1.4.3",
+      "hash": "eff2f1c0816ba620eeeadbc0739423c4c7a6f14b",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Record_Crafting",
       "credits": {
@@ -2168,7 +2345,7 @@
           "Bloo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -2178,26 +2355,29 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "B0clnMBy",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_relocators",
       "name": "Relocators",
-      "version": "2.4.5",
-      "hash": "db38059559c09f4a4a0d075c842226eaafafa466",
+      "version": "2.4.6",
+      "hash": "12ab2a5567c3de3ee2c3c8575ba5c9808227775d",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Relocators",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -2221,29 +2401,32 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "FdwwppEn",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_rope_ladders",
       "name": "Rope Ladders",
-      "version": "1.4.0",
-      "hash": "9643e61a4b17308be6c8188e537cd1bc872a7632",
+      "version": "1.4.1",
+      "hash": "e9120aff8fdb05cf64d35012dada38862d868f63",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Rope_Ladders",
       "credits": {
         "Creator": [
-          "MichaelMiner137"
+          "MichaelModulo"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -2251,7 +2434,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -2264,16 +2450,16 @@
     {
       "id": "gm4_scuba_gear",
       "name": "SCUBA Gear",
-      "version": "1.5.2",
-      "hash": "0ebb1e540daa20efde14bf0f4e9793ce971d9ab3",
+      "version": "1.5.3",
+      "hash": "8e5a63211e900e40310cc1be72ccb194cfc58f3f",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/SCUBA_Gear",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures by": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "DuckJr"
@@ -2286,21 +2472,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "6AVYWZgD",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_shapeless_portals",
       "name": "Shapeless Portals",
-      "version": "1.2.0",
-      "hash": "e1a9344b17d88279f353cddc24c89c0009104067",
+      "version": "1.2.1",
+      "hash": "a2ba5700fb22751ce519fc97ca049bb46b5b8a29",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Shapeless_Portals",
       "credits": {
@@ -2316,7 +2505,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -2329,8 +2521,8 @@
     {
       "id": "gm4_shroomites",
       "name": "Shroomites",
-      "version": "1.5.0",
-      "hash": "c7394e3947bdd5e043f27928ddde82f049cd79c1",
+      "version": "1.5.1",
+      "hash": "49f60f7a5f88202b1d82fc40d1cb26997ef04aa6",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Shroomites",
       "credits": {
@@ -2348,21 +2540,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "7Rcai2W4",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_smelteries",
       "name": "Smelteries",
-      "version": "1.7.2",
-      "hash": "2554c5fb3b2268f91d8aafd6dfc5ba39cb8c96ec",
+      "version": "1.7.3",
+      "hash": "9dc0c2582e84df1c494c3e2c8bdb52e9ed97a5e4",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/smelteries",
       "credits": {
@@ -2374,7 +2569,7 @@
           "Kroppeb",
           "Misode",
           "SpecialBuilder32",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures By": [
           "Kyrius"
@@ -2390,26 +2585,29 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "AHj8RSHk",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_soul_glass",
       "name": "Soul Glass",
-      "version": "1.4.1",
-      "hash": "0cc4259749a66eeef36debe9af026cb626f72cec",
+      "version": "1.4.2",
+      "hash": "81327f7e70da06edde58c2fcdc7eb1e483178d23",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Soul_Glass",
       "credits": {
         "Creators": [
-          "BluePsychoRanger",
+          "BPR",
           "Denniss",
           "Lue"
         ],
@@ -2422,21 +2620,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": "Blast Furnaces may need to be broken and replaced to be able to craft Soul Glass when the module is first installed.",
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "Hi8fkYoI",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_spawner_minecarts",
       "name": "Spawner Minecarts",
-      "version": "2.6.0",
-      "hash": "dd8e50d66c3b1a24ef99d68a3e5f90a78373d708",
+      "version": "2.6.1",
+      "hash": "ad0baf66145dbc83b84b592ed018f6c178783557",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Spawner_Minecarts",
       "credits": {
@@ -2454,21 +2655,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "j4qeIaSW",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_speed_paths",
       "name": "Speed Paths",
-      "version": "1.5.0",
-      "hash": "7502ddcb62990f76525f637372c274254aad6bab",
+      "version": "1.5.1",
+      "hash": "16af04c07c1cd89d54f1742e79918e167ee2e349",
       "video_link": "https://www.youtube.com/watch?v=99VFSW1ORzU",
       "wiki_link": "https://wiki.gm4.co/wiki/Speed_Paths",
       "credits": {
@@ -2488,21 +2692,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "vRH8BKZ7",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_standard_crafting",
       "name": "Standard Crafting",
-      "version": "1.5.2",
-      "hash": "c06102a9a15e79876badc8740fba6e50d401a718",
+      "version": "1.5.3",
+      "hash": "95239de670a6db0b62ebd7b36b188adfe1b51bac",
       "video_link": "https://www.youtube.com/watch?v=_GekIoefncg",
       "wiki_link": "https://wiki.gm4.co/wiki/Standard_Crafting",
       "credits": {
@@ -2521,21 +2728,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "KIxK9MA7",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_sunken_treasure",
       "name": "Sunken Treasure",
-      "version": "1.6.0",
-      "hash": "f8e429af6533a458bc31bfcd995dc3cb31c1f0b5",
+      "version": "1.6.1",
+      "hash": "f564005f07d3f111fac5eebca37dbc90955efafa",
       "video_link": "https://www.youtube.com/watch?v=VV7ZIyIzKV0",
       "wiki_link": "https://wiki.gm4.co/wiki/Sunken_Treasure",
       "credits": {
@@ -2544,7 +2754,7 @@
           "Sparks"
         ],
         "Updated by": [
-          "BluePsychoRanger",
+          "BPR",
           "Lue"
         ],
         "Icon Design": [
@@ -2559,21 +2769,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "drjgVlzU",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_sweethearts",
       "name": "Sweethearts",
-      "version": "1.5.0",
-      "hash": "fcee5c780a89afb21d931e46fcf005e925ed1d43",
+      "version": "1.5.1",
+      "hash": "6be62eb05b7e116557bc82eac4cdb3a16b85ad09",
       "video_link": "https://www.youtube.com/watch?v=mcopNZzY2dA",
       "wiki_link": "https://wiki.gm4.co/wiki/Sweethearts",
       "credits": {
@@ -2581,7 +2794,7 @@
           "The8BitMonkey"
         ],
         "Updated by": [
-          "BluePsychoRanger",
+          "BPR",
           "Thanathor"
         ],
         "Icon Design": [
@@ -2593,26 +2806,29 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "z33oiJCd",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_teleportation_anchors",
       "name": "Teleportation Anchors",
-      "version": "1.5.2",
-      "hash": "cb4e88e16d56fb2b470453eb481b1edff921586e",
+      "version": "1.5.3",
+      "hash": "255248af88a76c0906b4ff16c8950d89d9ac16ba",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Teleportation_Anchors",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -2627,21 +2843,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "CQkaELVA",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_tinkering_compressors",
       "name": "Tinkering Compressors",
-      "version": "1.5.1",
-      "hash": "209e29b679c25a9392fb0d7d2087ebc991584956",
+      "version": "1.5.2",
+      "hash": "5b51b935648fead50b0bf504a41b8482ece75516",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tinkering_Compressors",
       "credits": {
@@ -2649,8 +2868,8 @@
           "SirSheepe"
         ],
         "Updated by": [
-          "MichaelMiner137",
-          "BluePsychoRanger"
+          "MichaelModulo",
+          "BPR"
         ],
         "Textures by": [
           "Kyrius"
@@ -2669,21 +2888,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "EnojYUEm",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_tower_structures",
       "name": "Tower Structures",
-      "version": "3.4.0",
-      "hash": "88089f2ef0348f2ccdf4d3e9a2b69ad9aa09f06e",
+      "version": "3.4.1",
+      "hash": "2e7850f68d3b37c21436842562d7cf3fcddc97d1",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Orbis/Tower_Structures",
       "credits": {
@@ -2698,28 +2920,31 @@
         ]
       },
       "requires": [],
-      "description": "A custom terrain expansion pack that adds four new tower structures to the world.",
+      "description": "A custom terrain expansion pack that adds new tower structures to the world.",
       "recommends": [
         "gm4_dangerous_dungeons",
         "gm4_cooler_caves"
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "FvGL10DQ",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_tunnel_bores",
       "name": "Tunnel Bores",
-      "version": "1.5.6",
-      "hash": "826e472051077a135a7d67cc0ad035a365624493",
+      "version": "1.5.7",
+      "hash": "dba1f67113aaa9192f6637fd514131e52f794794",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Tunnel_Bores",
       "credits": {
@@ -2728,7 +2953,7 @@
         ],
         "Updated by": [
           "Bloo",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Icon Design": [
           "Hozz"
@@ -2742,21 +2967,24 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "L32wQVcn",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_undead_players",
       "name": "Undead Players",
-      "version": "1.6.1",
-      "hash": "1725770f9fec196748b1a43732d9f130e1805864",
+      "version": "1.6.2",
+      "hash": "d2d36fcbbc4032d6f03f7c08e6b17a35d2e354d4",
       "video_link": "https://www.youtube.com/watch?v=dD8nChP8t9A",
       "wiki_link": "https://wiki.gm4.co/wiki/Undead_Players",
       "credits": {
@@ -2775,7 +3003,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": "Modifies items right after a player died, and might fight over those items with other Datapacks that do the same.",
@@ -2788,8 +3019,8 @@
     {
       "id": "gm4_vecto_shamir",
       "name": "Vecto Shamir",
-      "version": "1.5.0",
-      "hash": "3dc594fa9cedfc2807df10e6e02f79a73b471b6c",
+      "version": "1.5.1",
+      "hash": "0bbcbbabb959545899de601335ad7eceb5681c41",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vecto_Shamir",
       "credits": {
@@ -2797,7 +3028,7 @@
           "Denniss"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -2807,21 +3038,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "wwe9xfEp",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_vertical_rails",
       "name": "Vertical Rails",
-      "version": "1.5.0",
-      "hash": "04ba9873e59a44b407936edbb250d001d8e1bf85",
+      "version": "1.5.1",
+      "hash": "3a486ff55e1b54f9eff4f19568f59bb6dd1e137a",
       "video_link": "https://www.youtube.com/watch?v=LJoN7CmJL4Q",
       "wiki_link": "https://wiki.gm4.co/wiki/Vertical_Rails",
       "credits": {
@@ -2842,7 +3076,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -2855,8 +3092,8 @@
     {
       "id": "gm4_vigere_shamir",
       "name": "Vigere Shamir",
-      "version": "1.4.0",
-      "hash": "e58a2f5068c7da7d6b5b4299abae6e3504b96984",
+      "version": "1.4.1",
+      "hash": "9613b12b63861e0707e6d1e62b37448d10b3e564",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Metallurgy/Vigere_Shamir",
       "credits": {
@@ -2865,7 +3102,7 @@
           "TheEpyonProject"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -2875,21 +3112,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "9QdXJeGc",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_washing_tanks",
       "name": "Washing Tanks",
-      "version": "1.4.0",
-      "hash": "5774754ebe26a800068449e71e404ccbf9d86df2",
+      "version": "1.4.1",
+      "hash": "5cceffa43bd2b5f0d41af0a03be86b2560989e88",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Washing_Tanks",
       "credits": {
@@ -2898,7 +3138,7 @@
           "Misode"
         ],
         "Icon Design": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [
@@ -2908,21 +3148,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "ipiZnkaE",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_weighted_armour",
       "name": "Weighted Armour",
-      "version": "1.7.0",
-      "hash": "8b672a77213229bd5e85aedabebd74577a3baaf6",
+      "version": "1.7.1",
+      "hash": "c997544e37acfd76bf3c1ba60a2b0ba873461f11",
       "video_link": "https://www.youtube.com/watch?v=rVRSXTGQPbg",
       "wiki_link": "https://wiki.gm4.co/wiki/Weighted_Armour",
       "credits": {
@@ -2938,7 +3181,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -2951,8 +3197,8 @@
     {
       "id": "gm4_xp_storage",
       "name": "XP Storage",
-      "version": "1.6.0",
-      "hash": "dc7dab3afad474851c2ef9355cb2a9aa20d0c384",
+      "version": "1.6.1",
+      "hash": "3582d21ca1da6acf29f6f0fc60533b36919c87f4",
       "video_link": "https://www.youtube.com/watch?v=hgq-5waSpVU&index=11&list=PLpa6LLAKqMWbXt5VvxCc6H4mwI-qacdGA",
       "wiki_link": "https://wiki.gm4.co/wiki/XP_Storage",
       "credits": {
@@ -2973,21 +3219,24 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
       "search_keywords": [],
       "publish_date": "2023-07-10",
-      "modrinth_id": null,
+      "modrinth_id": "jIY8HJPO",
       "smithed_link": null,
       "pmc_link": null
     },
     {
       "id": "gm4_zauber_cauldrons",
       "name": "Zauber Cauldrons",
-      "version": "1.12.1",
-      "hash": "50ec433dba3ebe2a5887757e75b9b82b5e568a2f",
+      "version": "1.12.2",
+      "hash": "23f214e637ac921526dc6b60da6084f1605317ad",
       "video_link": "https://www.youtube.com/watch?v=Io1JTFUzyrc",
       "wiki_link": "https://wiki.gm4.co/wiki/Zauber_Cauldrons",
       "credits": {
@@ -2997,7 +3246,7 @@
         "Updated by": [
           "Bloo",
           "Lue",
-          "BluePsychoRanger"
+          "BPR"
         ],
         "Textures": [
           "Memo",
@@ -3025,8 +3274,8 @@
     {
       "id": "gm4_zauber_liquids",
       "name": "Zauber Liquids",
-      "version": "1.8.0",
-      "hash": "966f54c1b80772e5d75a775e3bee3095b9190a4a",
+      "version": "1.8.1",
+      "hash": "3432e8707adfac771d32c4b5ad8f3ea155218877",
       "video_link": "https://www.youtube.com/watch?v=qa9lcbii1BE",
       "wiki_link": "https://wiki.gm4.co/wiki/Liquid_Tanks/Zauber_Liquids",
       "credits": {
@@ -3063,8 +3312,8 @@
     {
       "id": "gm4_ziprails",
       "name": "Ziprails",
-      "version": "1.5.0",
-      "hash": "d766c0d5fbb345f53903c822388e0d9185d21639",
+      "version": "1.5.1",
+      "hash": "b382e482deae4b2fd521b948318034a1af69fb6b",
       "video_link": "https://www.youtube.com/watch?v=QA7a5q2kVcg",
       "wiki_link": "https://wiki.gm4.co/wiki/Ziprails",
       "credits": {
@@ -3084,7 +3333,10 @@
       ],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -3097,8 +3349,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.3.2",
-      "hash": "bde1b2e90158ba03ad1ffcc85e09bfc8b73d6779",
+      "version": "1.3.3",
+      "hash": "00e470f211f301e52d8b6e70f1eda75b7c0aa555",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3113,7 +3365,7 @@
           "KompetenterKeks"
         ],
         "Font Magic": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3121,7 +3373,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": false,
       "important_note": null,
@@ -3136,13 +3391,13 @@
     "lib_brewing": {
       "id": "gm4_brewing",
       "name": "Gamemode 4 Brewing",
-      "version": "1.3.1",
-      "hash": "df69e06ea6f54f5dfd1683d74f52314c76c253d4",
+      "version": "1.3.2",
+      "hash": "d43d251d585c3c020fcd9c84d29c44db46f24acd",
       "video_link": "",
       "wiki_link": "",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3150,7 +3405,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": true,
       "important_note": null,
@@ -3163,8 +3421,8 @@
     "lib_custom_crafters": {
       "id": "gm4_custom_crafters",
       "name": "Gamemode 4 Custom Crafters",
-      "version": "3.3.2",
-      "hash": "e6c6135e012ccc64e26daca4c692efee4325e8a2",
+      "version": "3.3.3",
+      "hash": "2f00b4b0d33293734aae9e30abf8e2637893ec6d",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3182,7 +3440,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": true,
       "important_note": null,
@@ -3195,8 +3456,8 @@
     "lib_forceload": {
       "id": "gm4_forceload",
       "name": "Gamemode 4 Forceload",
-      "version": "1.4.1",
-      "hash": "826245ddee259cf36f54e8da1a7afe8f42b9d9a9",
+      "version": "1.4.2",
+      "hash": "0ab8314ec6e906e28627e5a0d61e21f6cd1321a6",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3209,7 +3470,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": true,
       "important_note": null,
@@ -3222,13 +3486,13 @@
     "lib_lore": {
       "id": "gm4_lore",
       "name": "Gamemode 4 Lore",
-      "version": "1.2.1",
-      "hash": "e06e06c522ba9137de7c032dea69db5f844d68a7",
+      "version": "1.2.2",
+      "hash": "160c8bb44c8fd87f165c665fd49f07edf05c6972",
       "video_link": "",
       "wiki_link": "",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3236,7 +3500,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": true,
       "important_note": null,
@@ -3249,13 +3516,13 @@
     "lib_machines": {
       "id": "gm4_machines",
       "name": "Gamemode 4 Machines",
-      "version": "1.3.1",
-      "hash": "03e2eb7ead53002ab24df78f3061fff48a7e7748",
+      "version": "1.3.2",
+      "hash": "06cc53c66b438e762438c9d0e3092b41d11f81b0",
       "video_link": "",
       "wiki_link": "",
       "credits": {
         "Machines Library Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3263,7 +3530,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": true,
       "important_note": null,
@@ -3276,8 +3546,8 @@
     "lib_player_death": {
       "id": "gm4_player_death",
       "name": "Gamemode 4 Player Death",
-      "version": "1.2.1",
-      "hash": "06691e2e4256d4274019b2e161a396c488a22215",
+      "version": "1.2.2",
+      "hash": "17b0bad5cbadbc186e23b5840273349120415c87",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3290,7 +3560,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": true,
       "important_note": null,
@@ -3303,13 +3576,13 @@
     "lib_potion_tracking": {
       "id": "gm4_potion_tracking",
       "name": "Gamemode 4 Potion Tracking",
-      "version": "1.2.1",
-      "hash": "3b839f76962410e057bd9745c7bd5e5674519ef5",
+      "version": "1.2.2",
+      "hash": "bf4ea4b0b1e190b1ab05ef261d131cb1d44d10f6",
       "video_link": "",
       "wiki_link": "",
       "credits": {
         "Creator": [
-          "BluePsychoRanger"
+          "BPR"
         ]
       },
       "requires": [],
@@ -3317,7 +3590,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": true,
       "important_note": null,
@@ -3330,8 +3606,8 @@
     "lib_trades": {
       "id": "gm4_trades",
       "name": "Gamemode 4 Trades",
-      "version": "1.5.1",
-      "hash": "fc601f07bebbbc72b953384cb1c26717b4ab87b1",
+      "version": "1.5.2",
+      "hash": "6ce027b851a3b03d525808026e39eee7931bc313",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3344,7 +3620,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": true,
       "important_note": null,
@@ -3357,13 +3636,13 @@
     "lib_trees": {
       "id": "gm4_trees",
       "name": "Gamemode 4 Trees",
-      "version": "1.2.1",
-      "hash": "f024e9b44322b5eaec15ebdd57243e4b3e792d3a",
+      "version": "1.2.2",
+      "hash": "44a7b55a3c2957d7fd20b5a2d72135d1b5da80ee",
       "video_link": "",
       "wiki_link": "",
       "credits": {
         "Creator": [
-          "BluePsychoRanger",
+          "BPR",
           "Bloo"
         ]
       },
@@ -3372,7 +3651,10 @@
       "recommends": [],
       "minecraft": [
         "1.21",
-        "1.21.1"
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4"
       ],
       "hidden": true,
       "important_note": null,
@@ -3393,25 +3675,31 @@
     "Andante": {
       "name": "Andante",
       "links": [
-        "https://twitter.com/andantett"
+        "https://bsky.app/profile/andante.dev"
       ]
     },
     "Bloo": {
       "name": "Bloo",
       "links": [
-        "https://twitter.com/Bloo_dev"
+        "https://bsky.app/profile/bloo.boo"
       ]
     },
-    "BluePsychoRanger": {
-      "name": "BluePsychoRanger",
+    "BPR": {
+      "name": "BPR",
       "links": [
-        "https://twitter.com/BluPsychoRanger"
+        "https://bsky.app/profile/bpr02.com"
       ]
     },
     "Bunnygamers": {
       "name": "Bunnygamers",
       "links": [
-        "https://twitter.com/BunnygamersMC"
+        "https://bsky.app/profile/bunnygamers.bsky.social"
+      ]
+    },
+    "catter1": {
+      "name": "catter1",
+      "links": [
+        "https://bsky.app/profile/catter.dev"
       ]
     },
     "Chopper2112": {
@@ -3423,7 +3711,7 @@
     "Denniss": {
       "name": "Denniss",
       "links": [
-        "https://twitter.com/Dennis2p_"
+        "https://github.com/Dennis-0"
       ]
     },
     "DuckJr": {
@@ -3457,7 +3745,7 @@
     "Kroppeb": {
       "name": "Kroppeb",
       "links": [
-        "https://twitter.com/kroppeb"
+        "https://tech.lgbt/@Kroppeb"
       ]
     },
     "Kruthers": {
@@ -3469,7 +3757,7 @@
     "Kyrius": {
       "name": "Kyrius",
       "links": [
-        "http://discordapp.com/users/287287322360414218"
+        "https://bsky.app/profile/kyriuspixels.bsky.social"
       ]
     },
     "Lue": {
@@ -3478,16 +3766,16 @@
         "https://github.com/Luexa"
       ]
     },
-    "MichaelMiner137": {
-      "name": "MichaelMiner137",
+    "MichaelModulo": {
+      "name": "MichaelModulo",
       "links": [
-        "https://linktr.ee/MichaelMiner137"
+        "https://www.michaelmodulo.dev/page/links.html"
       ]
     },
     "Misode": {
       "name": "Misode",
       "links": [
-        "https://twitter.com/misode_"
+        "https://bsky.app/profile/misode.dev"
       ]
     },
     "Memo": {
@@ -3523,25 +3811,25 @@
     "SirSheepe": {
       "name": "SirSheepe",
       "links": [
-        "https://twitter.com/SirSheepe"
+        "https://bsky.app/profile/sirsheepe.bsky.social"
       ]
     },
     "Sparks": {
       "name": "Sparks",
       "links": [
-        "https://twitter.com/SelcouthSparks"
+        "https://bsky.app/profile/selcouthsparks.bsky.social"
       ]
     },
     "SpecialBuilder32": {
       "name": "SpecialBuilder32",
       "links": [
-        "https://twitter.com/SpecialBuilder"
+        "https://bsky.app/profile/specialbuilder32.bsky.social"
       ]
     },
     "Thanathor": {
       "name": "Thanathor",
       "links": [
-        "https://twitter.com/The_Thanathor"
+        "https://bsky.app/profile/thanathor.bsky.social"
       ]
     },
     "The8BitMonkey": {

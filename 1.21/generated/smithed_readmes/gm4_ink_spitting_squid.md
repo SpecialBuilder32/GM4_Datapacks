@@ -2,7 +2,7 @@
 
 For too long have Squid been defenceless, now it's time for them to fight back! Or at least annoy you with some ink while you continue killing them.<!--$pmc:headerSize-->
 
-### Features:
+### Features
 - Squid will spit blinding ink on nearby players for 5 seconds.
 - Glow Squid will instead inflict glowing and night vision.
 - Only affects players that have their head submerged in water.
@@ -14,8 +14,8 @@ For too long have Squid been defenceless, now it's time for them to fight back! 
 
 ### Credits
 - Creator: [Energyxxer](https://youtube.com/user/Energyxxer)
-- Updated by: [BluePsychoRanger](https://twitter.com/BluPsychoRanger)
-- Icon Design: [Sparks](https://twitter.com/SelcouthSparks)
+- Updated by: [BPR](https://bsky.app/profile/bpr02.com)
+- Icon Design: [Sparks](https://bsky.app/profile/selcouthsparks.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
