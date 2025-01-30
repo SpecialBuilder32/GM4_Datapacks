@@ -12,6 +12,7 @@ pipeline:
       - gm4.plugins.manifest.update_patch
       - gm4.plugins.versioning.isolated_library
     pipeline:
+      - gm4.plugins.debug
       - beet.contrib.lantern_load.base_data_pack
       - gm4.plugins.manifest.write_credits
       - gm4.plugins.test.strip_tests

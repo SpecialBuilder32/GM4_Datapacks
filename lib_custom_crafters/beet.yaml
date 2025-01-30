@@ -20,6 +20,7 @@ require:
   - beet.contrib.babelbox
 
 pipeline:
+  - gm4.plugins.debug.inner
   - lib_custom_crafters.generate_item_tags
   - gm4.plugins.module.gm4_root_advancement
   - gm4_guidebook.generate_guidebooks

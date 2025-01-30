@@ -82,6 +82,7 @@ def release(ctx: Context):
 	`BEET_SMITHED_TOKEN` environment variable is set, will try to publish a
 	new version to Smithed if it doesn't already exist.
 	"""
+	print(f"running output.release for {ctx.project_id}")
 	version_dir = os.getenv("VERSION", "1.21")
 	release_dir = Path("release") / version_dir
 

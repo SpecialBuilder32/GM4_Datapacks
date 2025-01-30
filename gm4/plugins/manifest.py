@@ -164,6 +164,7 @@ def create(ctx: Context):
 
 def update_patch(ctx: Context):
     """Checks the datapack files for changes from last build, and increments patch number"""
+    print(f"running manifest.update_patch for {ctx.project_id}")
     yield
     logger = parent_logger.getChild("update_patch")
 
