@@ -275,6 +275,9 @@
       "gm4_trapped_signs:item/trapped_dark_oak_sign": 1,
       "gm4_trapped_signs:item/secret_trapped_dark_oak_sign": 2
     },
+    "decorated_pot": {
+      "gm4_blossoming_pots:guidebook_icon/blossoming_pots": 1
+    },
     "deepslate_copper_ore": {
       "gm4_smelteries:block/ore_display/deepslate_copper_ore": 1
     },
@@ -1327,7 +1330,13 @@
       "gm4_auto_crafting:item/auto_crafter": 140
     },
     "poisonous_potato": {
-      "gm4_chairs:gui/advancement/chairs_sit": 1
+      "gm4_chairs:gui/advancement/chairs_sit": 1,
+      "gm4_heart_canisters:gui/advancement/heart_canisters_tier_1": 4,
+      "gm4_heart_canisters:gui/advancement/heart_canisters_tier_2": 5,
+      "gm4_heart_canisters:gui/advancement/heart_canisters_max": 6,
+      "gm4_heart_canisters:item/heart_canister_tier_1": 7,
+      "gm4_heart_canisters:item/heart_canister_tier_2": 8,
+      "gm4_heart_canisters:guidebook_icon/heart_canisters": 10
     },
     "poppy": {
       "gm4_sweethearts:gui/advancement/sweethearts": 1,

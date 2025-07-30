@@ -68,8 +68,8 @@
         "links": ["https://github.com/Luexa"]
     },
     {
-        "name": "MichaelModulo",
-        "links": ["https://www.michaelmodulo.dev/page/links.html"]
+        "name": "Modulorium",
+        "links": ["https://www.modulorium.dev"]
     },
     {
         "name": "Misode",
@@ -82,6 +82,10 @@
     {
         "name": "Nik3141",
         "links": ["https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"]
+    },
+    {
+        "name": "runcows",
+        "links": ["https://bsky.app/profile/runcows.bsky.social"]
     },
     {
         "name": "Scommander",
@@ -126,5 +130,9 @@
     {
         "name": "Venomousbirds",
         "links": ["https://venomousbirds.artstation.com/"]
+    },
+    {
+        "name": "MulverineX",
+        "links": ["https://modrinth.com/user/MulverineX"]
     }
 ]
