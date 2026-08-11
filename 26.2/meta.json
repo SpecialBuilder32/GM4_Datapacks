@@ -1,5 +1,5 @@
 {
-  "last_commit": "ccc2d68ccd2da0ceaa5ad289cf53d38ee02b2525",
+  "last_commit": "8b8eb665c8fbdacb6278ee7f5a9ad8f858f8bbb7",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -192,6 +192,32 @@
       "publish_date": "2023-07-10",
       "modrinth_id": "ib7YfS5V",
       "smithed_link": "gm4_better_armour_stands",
+      "pmc_link": null
+    },
+    {
+      "id": "gm4_blasting_maces",
+      "name": "Blasting Maces",
+      "version": "1.0.0",
+      "hash": "86e5a1066af9a89ad247322fd419bcff773eb27a",
+      "video_link": "",
+      "wiki_link": "https://wiki.gm4.co/wiki/Blasting_Maces",
+      "credits": {
+        "Creator": [
+          "Drodo"
+        ]
+      },
+      "requires": [],
+      "description": "Why break one block when you can break nine? Now maces hit harder than ever!",
+      "recommends": [],
+      "minecraft": [
+        "26.2"
+      ],
+      "hidden": false,
+      "important_note": null,
+      "search_keywords": [],
+      "publish_date": "2026-08-11",
+      "modrinth_id": null,
+      "smithed_link": null,
       "pmc_link": null
     },
     {
@@ -1121,7 +1147,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.16",
+      "version": "1.1.17",
       "hash": "e4698b7de7673bff39c655506c50e703efb84aff",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2711,8 +2737,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.5.5",
-      "hash": "5c5b97bfe1bc0d8752274ab9ca2faf01d941fd15",
+      "version": "1.5.6",
+      "hash": "65da8405300353bf39b67fc0f66d8ac800e42584",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -3209,6 +3235,10 @@
       "links": [
         "https://modrinth.com/user/MulverineX"
       ]
+    },
+    "Drodo": {
+      "name": "Drodo",
+      "links": []
     }
   }
 }
