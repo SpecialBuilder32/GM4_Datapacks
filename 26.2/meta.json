@@ -1,5 +1,5 @@
 {
-  "last_commit": "8b8eb665c8fbdacb6278ee7f5a9ad8f858f8bbb7",
+  "last_commit": "12a6b6ec428a4113cce8fe761c3f3588ee2afc9b",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1147,7 +1147,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.17",
+      "version": "1.1.18",
       "hash": "e4698b7de7673bff39c655506c50e703efb84aff",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2363,8 +2363,8 @@
     {
       "id": "gm4_towering_trees",
       "name": "Towering Trees",
-      "version": "1.1.4",
-      "hash": "5b859c11bd12c8c12a227ac089e6a531f69fb41b",
+      "version": "1.1.5",
+      "hash": "f6f79e7c690a0f1b8e638c5f207b9f9b91bceee0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Towering_Trees",
       "credits": {
@@ -2376,6 +2376,9 @@
           "BPR",
           "rednls",
           "Dinoguin_Jess",
+          "Lune6"
+        ],
+        "Icon Design": [
           "Lune6"
         ]
       },
@@ -2737,8 +2740,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.5.6",
-      "hash": "65da8405300353bf39b67fc0f66d8ac800e42584",
+      "version": "1.5.7",
+      "hash": "d23ad71c633af274be20e62ffc729e67dd605d9e",
       "video_link": "",
       "wiki_link": "",
       "credits": {

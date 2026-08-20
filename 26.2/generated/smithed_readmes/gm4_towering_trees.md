@@ -15,6 +15,7 @@ Adds mega and small tree variants to any sapling that is missing one! <!--$pmc:h
 ### Credits
 - Creator: [Djones](https://bsky.app/profile/thanathor.bsky.social), [Kyrius](https://bsky.app/profile/kyriuspixels.bsky.social)
 - Tree Structures: [BPR](https://bsky.app/profile/bpr02.com), rednls, [Dinoguin_Jess](https://github.com/Dinoguin-Jess), [Lune6](https://bsky.app/profile/lune6.bsky.social)
+- Icon Design: [Lune6](https://bsky.app/profile/lune6.bsky.social)
 
 ---
 ## About Gamemode 4 <img src="https://raw.githubusercontent.com/Gamemode4Dev/GM4_Datapacks/master/base/images/gm4_logo.png" alt="Gamemode 4 Logo" width="20"/>
