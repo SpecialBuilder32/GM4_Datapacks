@@ -1,5 +1,5 @@
 {
-  "last_commit": "12a6b6ec428a4113cce8fe761c3f3588ee2afc9b",
+  "last_commit": "398ab3983443afd32e0020ea507c0a3dd3961268",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -101,8 +101,8 @@
     {
       "id": "gm4_balloon_animals",
       "name": "Balloon Animals",
-      "version": "1.4.4",
-      "hash": "6293f8b54647c6c696e11036d5920dee3e78bdd6",
+      "version": "1.4.5",
+      "hash": "e1b058f4f4e875ae0231af253b6185560115d0f3",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Balloon_Animals",
       "credits": {
@@ -814,8 +814,8 @@
     {
       "id": "gm4_dripleaf_launchers",
       "name": "Dripleaf Launchers",
-      "version": "1.5.4",
-      "hash": "995a4df9a84f1e7e501e50c909cba84d9eef1208",
+      "version": "1.5.5",
+      "hash": "714e31249bfa3acd50c3156ee31b1a78b90ccdf2",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Dripleaf_Launchers",
       "credits": {
@@ -988,8 +988,8 @@
     {
       "id": "gm4_guidebook",
       "name": "Guidebook",
-      "version": "3.3.4",
-      "hash": "2682b24335a9954cc41eddeb4ef2dba4a19ffa26",
+      "version": "3.3.5",
+      "hash": "a044783ba8c7f24dc5f1e5630eebb6c42f344521",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Guidebook",
       "credits": {
@@ -1055,8 +1055,8 @@
     {
       "id": "gm4_horsemanship",
       "name": "Horsemanship",
-      "version": "1.0.3",
-      "hash": "2a3cf9ba214a4d86aa96b1563e5525b0f2a450f4",
+      "version": "1.0.4",
+      "hash": "f9acb3c65e76dd1fdb8bdd13b2ed73e3b0463109",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Horsemanship",
       "credits": {
@@ -1147,7 +1147,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.18",
+      "version": "1.1.19",
       "hash": "e4698b7de7673bff39c655506c50e703efb84aff",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -1858,8 +1858,8 @@
     {
       "id": "gm4_reeling_rods",
       "name": "Reeling Rods",
-      "version": "1.1.5",
-      "hash": "b07cd1abd7c1cd15f003d776df5c57b11191b0bf",
+      "version": "1.1.6",
+      "hash": "d341b5704320bbf2fa6681b7a96daeae66b4e9e9",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Reeling_Rods",
       "credits": {
@@ -2229,8 +2229,8 @@
     {
       "id": "gm4_survival_refightalized",
       "name": "Survival Refightalized",
-      "version": "1.2.4",
-      "hash": "63ddc1b30559f9a731fe66d6ed392044efbe6aa7",
+      "version": "1.2.5",
+      "hash": "c81bd04c75fa7b236568d51227fddaca46bb82a0",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Survival_Refightalized",
       "credits": {
@@ -2740,8 +2740,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.5.7",
-      "hash": "d23ad71c633af274be20e62ffc729e67dd605d9e",
+      "version": "1.5.8",
+      "hash": "b979c0b7bdd1975df547f292fadf0adef3672583",
       "video_link": "",
       "wiki_link": "",
       "credits": {
@@ -2830,8 +2830,8 @@
     "lib_hooked_entity": {
       "id": "gm4_hooked_entity",
       "name": "Gamemode 4 Hooked Entity Selection",
-      "version": "1.0.2",
-      "hash": "3e47a8e11a193de1e08a12f63c9c1a51177059ce",
+      "version": "1.0.3",
+      "hash": "6b7e47c84233f0663809b5e900d6e5210a15587b",
       "video_link": "",
       "wiki_link": "",
       "credits": {
