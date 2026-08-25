@@ -1,5 +1,5 @@
 {
-  "last_commit": "398ab3983443afd32e0020ea507c0a3dd3961268",
+  "last_commit": "ede0b45643aecd9879643ce39746677398707166",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -197,13 +197,16 @@
     {
       "id": "gm4_blasting_maces",
       "name": "Blasting Maces",
-      "version": "1.0.0",
-      "hash": "86e5a1066af9a89ad247322fd419bcff773eb27a",
+      "version": "1.0.1",
+      "hash": "ee33cb0c8ba2a254078b7ce40c8f51478749c747",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Blasting_Maces",
       "credits": {
         "Creator": [
           "Drodo"
+        ],
+        "Icon Design": [
+          "Lune6"
         ]
       },
       "requires": [],
@@ -1147,7 +1150,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.19",
+      "version": "1.1.20",
       "hash": "e4698b7de7673bff39c655506c50e703efb84aff",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
@@ -2740,8 +2743,8 @@
     {
       "id": "gm4_resource_pack",
       "name": "Resource Pack",
-      "version": "1.5.8",
-      "hash": "b979c0b7bdd1975df547f292fadf0adef3672583",
+      "version": "1.5.9",
+      "hash": "f913e5dd42cc2829fc5931bceac159036f29c212",
       "video_link": "",
       "wiki_link": "",
       "credits": {
