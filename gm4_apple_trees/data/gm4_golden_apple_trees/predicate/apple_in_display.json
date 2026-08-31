@@ -2,11 +2,9 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "equipment": {
-      "offhand": {
-        "items": [
-          "minecraft:golden_apple"
-        ]
+    "slots": {
+      "contents": {
+        "items": "minecraft:golden_apple"
       }
     }
   }
