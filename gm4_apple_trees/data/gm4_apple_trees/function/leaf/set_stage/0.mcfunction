@@ -10,7 +10,7 @@ scoreboard players operation @s gm4_fruit_stage = #stage_1_start gm4_apple_data
 scoreboard players operation @s gm4_fruit_age -= #stage_0_start gm4_apple_data
 
 # visuals
-execute if predicate gm4_apple_trees:apple_holding positioned ~0.5 ~1.5 ~0.5 positioned ^-.25 ^ ^.1 run function gm4_apple_trees:leaf/apple/drop
+execute if predicate gm4_apple_trees:apple_in_display positioned ^0.25 ^-0.7 ^ run function gm4_apple_trees:leaf/apple/drop
 item replace entity @s contents with minecraft:air
 tag @s remove gm4_ripe_apple
 
