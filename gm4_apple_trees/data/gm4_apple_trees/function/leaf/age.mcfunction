@@ -1,5 +1,5 @@
 # decreases the age of a fruiting leaf. If it hits 0, the expansion will have to perform some stage change (e.g. grow fruit bigger or drop fruit)
-# @s = gm4_fruiting_leaf marker
+# @s = gm4_apple item_display
 # located at world spawn
 # run from gm4_apple_trees:slow_clock
 

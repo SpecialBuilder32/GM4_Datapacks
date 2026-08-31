@@ -1,5 +1,5 @@
 # sets this apple leaf's stage to 0 (final stage)
-# @s = gm4_apple_leaf on stage 2 (big apple) which should drop its apple
+# @s = gm4_apple item_display on stage 2 (big apple) which should drop its apple
 # located at @s align xyz
 # run from gm4_apple_trees:tree/leaf/fruiting/advance_stage
 
@@ -11,5 +11,8 @@ scoreboard players operation @s gm4_fruit_age -= #stage_0_start gm4_apple_data
 
 # visuals
 execute if predicate gm4_apple_trees:apple_holding positioned ~0.5 ~1.5 ~0.5 positioned ^-.25 ^ ^.1 run function gm4_apple_trees:leaf/apple/drop
-data merge entity @s {Marker:1b,equipment:{},ShowArms:1b,Small:1b,DisabledSlots:2171166,Tags:["gm4_no_edit","gm4_apple","smithed.entity","smithed.strict"]}
-tp @s ~0.5 ~1.05 ~0.5
+item replace entity @s contents with minecraft:air
+tag @s remove gm4_ripe_apple
+
+#apple transformation data for reference
+# transformation:{right_rotation:{angle:1.57,axis:[0f,1f,0f]},scale:[0.55f,0.55f,0.55f],left_rotation:{axis:[0,0,0],angle:0},translation:[0.25,-0.71,-0.06]}}
