@@ -1,6 +1,6 @@
 # removes a golden apple leaf item display if it is not inside a leaf anymore
 # @s = gm4_golden_apple
-# located at @s align xyz
+# located at @s
 # run from gm4_apple_trees:main
 
 # kill apple item display

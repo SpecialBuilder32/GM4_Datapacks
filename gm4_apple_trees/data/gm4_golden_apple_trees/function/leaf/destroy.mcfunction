@@ -9,5 +9,8 @@ loot spawn ~ ~ ~ loot gm4_apple_trees:blocks/apple_tree_leaf
 execute as @e[type=item_display,distance=..3,tag=gm4_golden_apple,tag=!gm4_ripe_apple] at @s unless block ~ ~ ~ minecraft:oak_leaves run kill @s
 execute as @e[type=item_display,distance=..3,tag=gm4_golden_apple,tag=gm4_ripe_apple] at @s unless block ~ ~ ~ minecraft:oak_leaves run function gm4_golden_apple_trees:leaf/apple/destroy
 
+# kill interaction entities
+execute as @e[type=interaction,distance=..3,tag=gm4_golden_apple_interaction] at @s align xyz unless block ~ ~1 ~ minecraft:oak_leaves run kill @s
+
 # kill
 kill @s

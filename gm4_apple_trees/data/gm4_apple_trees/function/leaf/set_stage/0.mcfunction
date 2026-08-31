@@ -1,6 +1,6 @@
 # sets this apple leaf's stage to 0 (final stage)
 # @s = gm4_apple item_display on stage 2 (big apple) which should drop its apple
-# located at @s align xyz
+# located at @s
 # run from gm4_apple_trees:tree/leaf/fruiting/advance_stage
 
 # set leaf's next stage change age

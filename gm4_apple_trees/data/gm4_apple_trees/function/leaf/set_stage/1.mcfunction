@@ -1,6 +1,6 @@
 # sets this apple leaf's stage to 1
 # @s = gm4_apple item_display on stage 0 (no apple) which should get an unripe apple
-# located at @s align xyz
+# located at @s
 # run from gm4_apple_trees:tree/leaf/fruiting/advance_stage
 
 # set leaf's next stage change age

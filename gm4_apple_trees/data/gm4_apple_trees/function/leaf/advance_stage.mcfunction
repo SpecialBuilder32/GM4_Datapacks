@@ -1,6 +1,6 @@
 # advances the stage of the fruit
 # @s = gm4_apple item_display
-# located at @s align xyz
+# located at @s
 # run from gm4_apple_trees:leaf/age
 
 # set the visual stage of the fruit depending the score
