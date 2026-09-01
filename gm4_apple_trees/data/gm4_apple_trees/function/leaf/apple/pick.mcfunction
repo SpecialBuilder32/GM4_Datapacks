@@ -25,5 +25,3 @@ execute if items entity @s weapon.mainhand minecraft:apple[count={min:1,max:63}]
 execute if predicate gm4_apple_trees:empty_mainhand run item replace entity @s weapon.mainhand with minecraft:apple 1
 
 tag @s remove gm4_apple_take
-
-# execute positioned ^ ^ ^2.5 as @e[type=minecraft:armor_stand,tag=gm4_apple,tag=gm4_ripe_apple,distance=..3,sort=nearest,limit=1,predicate=!gm4_apple_trees:apple_holding] at @s align xyz run function gm4_apple_trees:leaf/set_stage/0

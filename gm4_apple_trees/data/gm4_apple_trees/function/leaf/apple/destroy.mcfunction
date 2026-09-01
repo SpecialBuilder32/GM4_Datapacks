@@ -4,7 +4,7 @@
 # run from gm4_apple_trees:leaf/destroy
 
 # drop apple
-execute if predicate gm4_apple_trees:apple_in_display positioned ^0.25 ^-0.7 ^ run function gm4_apple_trees:leaf/apple/drop
+execute if items entity @s contents minecraft:apple positioned ^0.25 ^-0.7 ^ run function gm4_apple_trees:leaf/apple/drop
 
 # kill
 kill @s

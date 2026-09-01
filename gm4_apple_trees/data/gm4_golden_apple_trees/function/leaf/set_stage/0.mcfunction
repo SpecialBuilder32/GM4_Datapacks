@@ -10,6 +10,8 @@ scoreboard players operation @s gm4_fruit_stage = #gapple_stage_1_start gm4_appl
 scoreboard players operation @s gm4_fruit_age -= #gapple_stage_0_start gm4_apple_data
 
 # visuals
-execute if predicate gm4_golden_apple_trees:apple_in_display positioned ^0.25 ^-0.7 ^ run function gm4_golden_apple_trees:leaf/apple/drop
+execute unless entity @s[tag=gm4_skip_item_drop] positioned ^0.25 ^-0.7 ^ run function gm4_golden_apple_trees:leaf/apple/drop
 item replace entity @s contents with minecraft:air
 tag @s remove gm4_ripe_apple
+tag @s remove gm4_skip_item_drop
+tag @s remove gm4_apple_taken
