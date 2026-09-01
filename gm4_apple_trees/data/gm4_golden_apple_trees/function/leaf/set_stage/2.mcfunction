@@ -12,4 +12,4 @@ item replace entity @s contents with minecraft:golden_apple 1
 tag @s add gm4_ripe_apple
 
 # summon interaction
-summon minecraft:interaction ^0.25 ^-0.95 ^-0.06 {Tags:["gm4_golden_apple_interaction","smithed.entity","smithed.strict"],height:0.4,width:0.4}
+summon minecraft:interaction ^0.25 ^-0.95 ^-0.06 {Tags:["gm4_golden_apple_interaction","smithed.entity","smithed.strict"],height:0.4,width:0.4,response:1}
