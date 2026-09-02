@@ -5,11 +5,11 @@
 
 # increases age
 scoreboard players add @s gm4_fruit_age 1
-scoreboard players add @s gm4_global_fruit_age 1
+scoreboard players add @s gm4_global_age 1
 
 # process jumps in age from being unloaded
-scoreboard players operation $age_diff gm4_apple_data = $global_age gm4_global_fruit_age
-scoreboard players operation $age_diff gm4_apple_data -= @s gm4_global_fruit_age
+scoreboard players operation $age_diff gm4_apple_data = $global_fruit_age gm4_global_age
+scoreboard players operation $age_diff gm4_apple_data -= @s gm4_global_age
 scoreboard players operation @s gm4_fruit_age += $age_diff gm4_apple_data
 
 # time skips cap at either go no->unripe, no/unripe->ripe or ripe->dropped
@@ -26,4 +26,4 @@ execute if score $age_diff gm4_apple_data matches 1.. if score @s gm4_fruit_stag
 execute if score @s gm4_fruit_age >= @s gm4_fruit_stage at @s run function gm4_golden_apple_trees:leaf/advance_stage
 
 # sync with global age
-scoreboard players operation @s gm4_global_fruit_age = $global_age gm4_global_fruit_age
+scoreboard players operation @s gm4_global_age = $global_fruit_age gm4_global_age
