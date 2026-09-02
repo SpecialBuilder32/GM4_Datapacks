@@ -13,11 +13,13 @@ meta:
     versioning:
       schedule_loops: [tick, main]
     website:
-      description: "Why break one block when you can break nine? Now maces hit harder than ever!"
+      description: Why break one block when you can break nine? Now maces hit harder than ever!
       recommended: []
       notes: []
+    modrinth: 
+      project_id: YaoejRWw
     video: null
-    wiki: "https://wiki.gm4.co/wiki/Blasting_Maces"
+    wiki: https://wiki.gm4.co/wiki/Blasting_Maces
     credits:
       Creator:
         - Drodo
