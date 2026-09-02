@@ -8,5 +8,6 @@
 scoreboard players set @s gm4_entity_version 2
 scoreboard players operation @s gm4_fruit_stage = #gapple_stage_0_start gm4_apple_data
 scoreboard players operation @s gm4_fruit_age = #gapple_stage_2_start gm4_apple_data
+scoreboard players operation @s gm4_global_fruit_age = $global_age gm4_global_fruit_age
 
 tag @s remove gm4_golden_apple_uninitialized
