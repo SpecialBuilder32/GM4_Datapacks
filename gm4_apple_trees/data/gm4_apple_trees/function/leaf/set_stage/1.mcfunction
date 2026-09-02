@@ -8,4 +8,4 @@ scoreboard players operation @s gm4_fruit_stage = #stage_2_start gm4_apple_data
 
 # visuals
 playsound minecraft:block.beehive.drip block @a[distance=..8] ~ ~ ~ 0.3 1.4
-item replace entity @s contents with minecraft:apple[custom_model_data={"strings":["gm4_apple_trees:block/apple_unripe"]}] 1
+item replace entity @s contents with minecraft:apple[custom_model_data={strings:["gm4_apple_trees:block/apple_unripe"]}] 1
