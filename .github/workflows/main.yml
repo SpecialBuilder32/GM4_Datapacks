@@ -47,6 +47,14 @@ jobs:
         env:
           LOG_LEVEL: ${{ runner.debug == 1 && 'DEBUG' || 'INFO'}}
 
+      - name: Send beet contexts to publish jobs
+        if: github.event_name != 'pull_request'
+        uses: action/upload-artifact@v7
+        with:
+          name: 'beet_contexts.pkl'
+          path: ${{ github.workspace }}/artifact/worker_contexts.pkl
+
+
       - name: Remove non-modules for artifact
         if: github.event_name == 'pull_request'
         run: |
@@ -158,6 +166,15 @@ jobs:
       # TODO use cache from build? 
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
+
+      - name: Receive beet contexts from build job
+        if: github.event_name != 'pull_request'
+        uses: action/download-artifact@v7
+        with:
+          name: 'beet_contexts.pkl'
+          path: ${{ github.workspace }}/artifact/worker_contexts.pkl
+
+        # TODO delete artifact when done
 
       - name: Publish all modules
         run: uv run beet -p beet-publish.yaml -l ${{ env.LOG_LEVEL }} build

@@ -71,6 +71,8 @@ pipeline:
       - gm4.plugins.write_mcmeta
       - gm4.plugins.worker.store_project
 
+  - gm4.plugins.worker.pickle_worker
+
   - extend: beet.yaml
     directory: resource_pack
     require:

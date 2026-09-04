@@ -1,2 +1,8 @@
 pipeline: 
   - test_plugin.say_hello
+  - gm4.plugins.worker.unpickle_worker
+  - pipeline:
+    - gm4.plugins.worker.retrieve_and_run
+    meta:
+      plugins:
+      - test_plugin.print_data

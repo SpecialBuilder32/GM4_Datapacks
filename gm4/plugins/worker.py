@@ -1,8 +1,11 @@
 from beet import Connection, Context, Pipeline, ResourcePack, DataPack
 from typing import Any
+import pickle
+from pathlib import Path
 
 RETRIEVE_ALL_PROJECTS = 0
 RETRIEVE_LAST_PROJECT = 1
+INSPECT_ALL_PROJECTS = 2
 ProjectPacket = tuple[ResourcePack, DataPack, dict[str, Any]]
 
 def store_project(ctx: Context):
@@ -77,6 +80,22 @@ def retrieve_and_merge(ctx: Context):
             ctx.data.merge(dp)
             ctx.assets.merge(rp)
 
+def pickle_worker(ctx: Context):
+    """Stores worker contexts to pickle file for sharing to other github action jobs"""
+    with ctx.worker(bridge) as channel:
+        channel.send(INSPECT_ALL_PROJECTS)
+    for project_storage_list in channel:
+        with open(Path("artifacts", "worker_contexts.pkl"), "wb") as f:
+            pickle.dump(project_storage, f)
+
+def unpickle_worker(ctx: Context):
+    """Loads worker contexts from pickkle file"""
+    with open(Path("artifacts", "worker_contexts.pkl"), "rb") as f:
+        project_storage_list: List[ProjectPacket] = pickle.load(project_storage, f)
+    with ctx.worker(bridge) as channel:
+        for project_ctx in project_storage_list:
+            channel.send(project_ctx)
+
 def bridge(connection: Connection[ProjectPacket|int, list[ProjectPacket]]):
     # incoming types `ProjectPacket|int` and outgoing types `list[ProjectPacket]`
     project_storage: list[tuple[ResourcePack, DataPack, dict[str, Any]]] = []
@@ -92,3 +111,5 @@ def bridge(connection: Connection[ProjectPacket|int, list[ProjectPacket]]):
                 project_storage = []
             if request == RETRIEVE_LAST_PROJECT:
                 client.send([project_storage.pop(-1)])
+            if request == INSPECT_ALL_PROJECTS: # stored objects without clearing
+                client.send(project_storage)
