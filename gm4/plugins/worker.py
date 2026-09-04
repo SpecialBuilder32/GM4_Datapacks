@@ -89,7 +89,7 @@ def pickle_worker(ctx: Context):
         artifact_dir = Path("artifacts")
         os.makedirs(artifact_dir, exist_ok=True)
         with open(artifact_dir/"worker_contexts.pkl", "wb") as f:
-            pickle.dump(project_storage, f)
+            pickle.dump(project_storage_list, f)
 
 def unpickle_worker(ctx: Context):
     """Loads worker contexts from pickkle file"""
