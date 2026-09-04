@@ -14,3 +14,5 @@ scoreboard players reset @a gm4_horse.horse_moved
 
 # dev log
 execute as @a[tag=gm4_horse_dev] at @s as @e[type=#gm4_horsemanship:trainable,limit=1,sort=nearest] run title @p actionbar [{text:"| Tracked Horse: "},{selector:"@s"},{text:" XP: ","color":"gray"},{"score":{"name":"@s","objective":"gm4_horse.experience_to_level"},"color":"white"},{"text":" |"}]
+
+tellraw @a {translate:text.gm4.guidebook.shapeless}
