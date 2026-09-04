@@ -2,6 +2,7 @@ from beet import Connection, Context, Pipeline, ResourcePack, DataPack
 from typing import Any
 import pickle
 from pathlib import Path
+import os
 
 RETRIEVE_ALL_PROJECTS = 0
 RETRIEVE_LAST_PROJECT = 1
@@ -85,7 +86,9 @@ def pickle_worker(ctx: Context):
     with ctx.worker(bridge) as channel:
         channel.send(INSPECT_ALL_PROJECTS)
     for project_storage_list in channel:
-        with open(Path("artifacts", "worker_contexts.pkl"), "wb") as f:
+        artifact_path = Path("artifacts", "worker_contexts.pkl")
+        os.makedirs(artifact_path, exist_ok=True)
+        with open(artifact_path, "wb") as f:
             pickle.dump(project_storage, f)
 
 def unpickle_worker(ctx: Context):
