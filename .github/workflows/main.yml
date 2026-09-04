@@ -49,7 +49,7 @@ jobs:
 
       - name: Send beet contexts to publish jobs
         if: github.event_name != 'pull_request'
-        uses: action/upload-artifact@v7
+        uses: actions/upload-artifact@v7
         with:
           name: 'beet_contexts.pkl'
           path: ${{ github.workspace }}/artifact/worker_contexts.pkl
@@ -169,7 +169,7 @@ jobs:
 
       - name: Receive beet contexts from build job
         if: github.event_name != 'pull_request'
-        uses: action/download-artifact@v7
+        uses: actions/download-artifact@v7
         with:
           name: 'beet_contexts.pkl'
           path: ${{ github.workspace }}/artifact/worker_contexts.pkl
