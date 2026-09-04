@@ -16,11 +16,11 @@ jobs:
     concurrency:
       group: ${{ github.event_name != 'pull_request' && 'release' || format('pr-{0}', github.event.number) }}
     steps:
-      - uses: aactions/checkout@v7
+      - uses: actions/checkout@v7
 
       - name: Checkout release branch
         if: github.event_name != 'pull_request'
-        uses: aactions/checkout@v7
+        uses: actions/checkout@v7
         with:
           ref: release
           path: release
@@ -94,7 +94,7 @@ jobs:
     name: 'test-${{ matrix.version }}'
     runs-on: ubuntu-24.04
     steps:
-      - uses: aactions/checkout@v7
+      - uses: actions/checkout@v7
 
       - name: Set up uv
         uses: astral-sh/setup-uv@v7
