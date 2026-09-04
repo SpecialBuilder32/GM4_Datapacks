@@ -74,7 +74,8 @@ class AnnotationFormatter(logging.Formatter):
         if match:
             module, resource_location, line, col = match.groups()
             location_hint = f" %0A Generated file of {module}, {resource_location}, line {line}, column {col}"
-            return f"::{level} title={record.name}::{record.name} {location_hint} {expl}"
+            expl = expl.replace("%0A", f"%0A{location_hint}%0A", 1) # put new hint text before the rest of the log message
+            return f"::{level} title={record.name}::{record.name} {expl}"
 
         return f"::{level} title={record.name}::{record.name} {expl}"
 
