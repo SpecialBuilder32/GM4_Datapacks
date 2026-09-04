@@ -86,10 +86,14 @@ def pickle_worker(ctx: Context):
     with ctx.worker(bridge) as channel:
         channel.send(INSPECT_ALL_PROJECTS)
     for project_storage_list in channel:
+        pickable_projects = []
+        for _, _, params in project_storage_list:
+            pickable_projects.append((DataPack(), ResourcePack(), params)) # don't send full DP or RP objects, just context entries
+
         artifact_dir = Path("artifacts")
         os.makedirs(artifact_dir, exist_ok=True)
         with open(artifact_dir/"worker_contexts.pkl", "wb") as f:
-            pickle.dump(project_storage_list, f)
+            pickle.dump(pickable_projects, f)
 
 def unpickle_worker(ctx: Context):
     """Loads worker contexts from pickkle file"""
