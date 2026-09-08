@@ -1,5 +1,5 @@
 {
-  "last_commit": "8a5a4dd67192ae3634c9d3bb0fcf5f117d58b094",
+  "last_commit": "6e2d7ee1c1f60d17cbe9e23195f5be2d4413a138",
   "modules": [
     {
       "id": "gm4_animi_shamir",
@@ -1150,7 +1150,7 @@
     {
       "id": "gm4_lavish_livestock",
       "name": "Lavish Livestock",
-      "version": "1.1.41",
+      "version": "1.1.42",
       "hash": "e4698b7de7673bff39c655506c50e703efb84aff",
       "video_link": "",
       "wiki_link": "https://wiki.gm4.co/wiki/Lavish_Livestock",
